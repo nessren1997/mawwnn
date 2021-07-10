@@ -6,7 +6,6 @@ const index: FC = () => {
   return (
     <Row justify="center">
       <Col span={24}>
-        eyad
         <AboutUs />
       </Col>
     </Row>
