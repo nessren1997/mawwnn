@@ -1,0 +1,24 @@
+{
+  "shop-by-category": "تسوق حسب التصنيفات",
+  "shop-by-brand": "المتجر",
+  "search-product": "البحث عن منتج",
+  "all": "الجميع",
+  "links": {
+    "home": "الصفحة الرئيسية",
+    "about-us": "من نحن",
+    "our-products": "منتجاتنا",
+    "contact-us": "اتصل بنا",
+    "jobs": "الوظائف",
+    "check-order": "تحقق من طلبك",
+    "cart": "عربة التسوق"
+  },
+  "select": {
+    "all": "الجميع"
+  },
+  "sign-out": "تسجيل الخروج",
+  "p-info": "معلومات الحساب",
+  "nav-ar": "عربي",
+  "nav-en": "English",
+  "confirm-logout": "تسجيل الخروج؟",
+  "login": "تسجيل الدخول"
+}

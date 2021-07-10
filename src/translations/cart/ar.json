@@ -1,0 +1,91 @@
+{
+  "shopping-cart": "عربة التسوق",
+  "discount": "الحسم",
+  "empty-cart": "عربة التسوق فارغة",
+  "step-one-header": {
+    "image": "الصورة",
+    "amount": "الكمية",
+    "price": "السعر",
+    "description": "المواصفات",
+    "total": "المجموع"
+  },
+  "step-one-footer": {
+    "total": "المجموع"
+  },
+  "voucher-card": "بطاقة الخصم",
+  "voucher_code": "رمز البطاقة",
+  "enter-voucher-card": "ادخل رمز بطاقة الخصم الخاص بك",
+  "details-form": {
+    "total": "الاجمالي",
+    "delivery": "التوصيل",
+    "free": "مجاني",
+    "complete-order": "اتمام الطلب"
+  },
+  "verify": "تأكيد",
+  "cod": "الدفع عند التوصيل",
+  "confirmation": "التأكيد",
+  "cod-info": "معلومات التوصيل",
+  "order-details": "تفاصيل الفاتورة",
+  "cart-forms": {
+    "last-name": "الكنية",
+    "first-name": "الاسم الاول",
+    "delivery-date": "موعد توصيل الطلب",
+    "save-info": "حفظ هذه المعلومات",
+    "back-shopping": "العودة الى التسوق",
+    "confirm": "تأكيد الطلب",
+    "governorate": "المحافظة",
+    "address": "العنوان",
+    "mobile": "الجوال",
+    "enter-confirmation": "الرجاء ادخال الرمز المرسل",
+    "phone-number": "رقم الهاتف غير صالح"
+  },
+  "cart-errors": {
+    "address": "الرجاء ادخال العنوان",
+    "governorate": "الرجاء ادخال المحافظة",
+    "delivery-date": "الرجاء ادخال موعد التوصيل",
+    "mobile": "الرجاء ادخال رقم الجوال ",
+    "last-name": "الرجاء ادخال الكنية ",
+    "first-name": "الرجاء ادخال الأسم ",
+    "order-sent-failed": "فشل ارسال الطلب",
+    "invalid-number": "رقم الهاتف المدخل خاطئ",
+    "invalid-date": "يرجى التأكد من تاريخ التوصيل. الرجاء اختيار الغد او تاريخ لاحق"
+  },
+  "verification-text": "سوف تتلقى رسالة نصية على جوالك لتأكيد الطلب",
+  "verification-resend": "في حال لم يصلك رمز تاكيد الطلب على الهاتف المحمول",
+  "click-here": "يرجى الضغط هنا",
+  "thank-you-page": {
+    "thanks-message": "شكراً لثقتك بشركة MWAN للتجارة والصناعة",
+    "order-sent-success": "تم ارسال طلبكم بنجاح",
+    "total-price": "المبلغ الاجمالي",
+    "order-num": "رقم العملية",
+    "note": "ملاحظة: يمكنك متابعة الطلب من خلال رقم عملية الشراء"
+  },
+  "free-delivery": "مجاني",
+  "quantity": "العدد ${num}",
+  "coupon-success": "تم قبول الكوبون",
+  "coupon-success-desc": "تم قبول الكوبون بنجاح",
+  "coupon-failed": "فشلت العملية",
+  "coupon-failed-desc": "الكوبون المدخل غير صالح",
+  "login-to-use-coupon-desc": "لادخال الكوبون, الرجاء تسجيل الدخول",
+  "order-success-desc": "تم ارسال طلبك بنجاح",
+  "order-success": "تمت العملية",
+  "verification-success": "تم قبول رمز التأكيد",
+  "verification-success-desc": "تم تأكيد طلبك بنجاح",
+  "verification-failed": "رمز خاطئ",
+  "verification-failed-desc": "رمز التاكيد المدخل خاطئ",
+  "sorry": "عذرا",
+  "min_price": "الحد الأدنى للطلب ${price}",
+  "phone-help": " ex : +9639XXXXXXXX",
+  "you-can-view": "إضغط هنا لعرض حالة الطلب",
+  "note-save-this-url": "ملاحظة: إحفظ هذا الرابط لعرض حالة الطلب الخاص بك لاحقاً",
+  "new-step-two": {
+    "auth": {
+      "title": "إتمام طلب الشراء يحتاج منك أن تكون مسجلاً",
+      "login": "تسجيل الدخول"
+    }
+  },
+  "Add new address": "أضف عنوان جديد",
+  "address": "العنوان",
+  "add": "اضافة",
+  "please_enter_address": "الرجاء اضافة عنوان"
+}

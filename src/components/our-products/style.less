@@ -1,0 +1,32 @@
+@import '../../constants/layout/color.less';
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap,
+.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+  display: grid;
+  align-items: center;
+}
+.category-tabs .ant-tabs-nav-list {
+  justify-content: space-around;
+}
+.category-tabs .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab {
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 10px;
+  box-shadow: 2px 2px 10px #999999;
+}
+.category-tabs
+  .ant-tabs-card.ant-tabs-top:hover
+  > .ant-tabs-nav:hover
+  .ant-tabs-tab:hover,
+.ant-tabs-card.ant-tabs-top > div:hover > .ant-tabs-nav .ant-tabs-tab:hover {
+  box-shadow: 4px 4px 16px #757575;
+}
+.category-tabs .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active {
+  background: @primaryColor;
+  border: none;
+}
+.category-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #fff;
+}

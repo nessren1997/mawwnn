@@ -1,0 +1,41 @@
+{
+  "orders": "Orders",
+  "myaccount": "Profile personly",
+  "processNumber": "Operation number ",
+  "date": "Date",
+  "status": "Status",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "phone": "Phone Number",
+  "password": "Password",
+  "confirmpass": "Confirm Password",
+  "edit": "Edit",
+  "cancel": "Cancel",
+  "binding": "binding",
+  "recevired": "recevired",
+  "Canceled": "Canceled",
+  "passwordLength": "password should be at least 8",
+  "confirm_pass": "the two password don't match",
+  "total": "total",
+  "id": "id",
+  "editInfo": "The user's Info has been edited",
+  "noOrder": "there are no orders",
+  "update": "the personal information updated successfully",
+  "click-here": "click here",
+  "verification-resend": "If you didn't recieve the confirmation message",
+  "verification-text": "You'll recieve a text message on your phone with confirmation code",
+  "cart-forms": {
+    "enter-confirmation": "Please Enter The Confirmation Code"
+  },
+  "order-status": {
+    "not-verified": "Not Verified",
+    "verified": "Verified",
+    "pending": "Pending",
+    "on-delivery": "On Delivery",
+    "done": "Received",
+    "rejected": "Rejected"
+  },
+  "need-verify": "Need verify?",
+  "verify": "Verify"
+}

@@ -1,0 +1,14 @@
+{
+  "sent": "Your order has been received and it is in progress",
+  "procces": "order status",
+  "note": "note",
+  "can": "You can track the order through the purchase transaction number",
+  "total": "Total amount",
+  "amount": "amount",
+  "count": "count",
+  "plug": "Delivery",
+  "free": "free",
+  "totlatOrder": "totlat",
+  "pending": "pending",
+  "received": "received"
+}

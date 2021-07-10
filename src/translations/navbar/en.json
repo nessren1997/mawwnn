@@ -1,0 +1,24 @@
+{
+  "shop-by-category": "Shop By Category",
+  "shop-by-brand": "Store",
+  "search-product": "Search Products",
+  "all": "All",
+  "links": {
+    "home": "Home",
+    "about-us": "About us",
+    "our-products": "Our products",
+    "contact-us": "Contact us",
+    "jobs": "Jobs",
+    "check-order": "check order",
+    "cart": "Cart"
+  },
+  "select": {
+    "all": "All"
+  },
+  "sign-out": "Sign Out",
+  "p-info": "My account",
+  "nav-ar": "عربي",
+  "nav-en": "English",
+  "confirm-logout": "Are you sure you want to sign out?",
+  "login": "Login"
+}

@@ -1,0 +1,6 @@
+{
+    "send": "Send",
+    "check": "We sent a confirmation code via sms to your phone",
+    "invalidNumber": "The entered phone is invalid",
+    "enter your number please": "Enter your number"
+}

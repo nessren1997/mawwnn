@@ -1,0 +1,10 @@
+login & register:
+  ✔ multiple errors. @done(21-03-20 14:55)
+  ✔ fix approve account token and auth. @done(21-03-20 14:55)
+cart:
+  ✔ coupon check error in first request. @started(21-03-20 11:11) @done(21-03-20 11:11) @lasted(15s)
+  ✔ coupon doesn`t work form request. @started(21-03-20 09:07) @done(21-03-20 09:11) @lasted(4m56s)
+  ✔ make validation for both date and phone number in client. @done(21-03-20 13:50)
+single product:
+  ✔ add button to the cart after he add product to cart. @done(21-03-20 13:50)
+  Gift adding expair date to adding new gifts and show it in the table

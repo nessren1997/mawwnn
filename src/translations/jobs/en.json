@@ -1,0 +1,14 @@
+{
+    "upload_cv": "Click to upload your CV",
+    "upload_sucsess": "'${name}' file uploaded successfully.",
+    "upload_failed": "'${info.file.name}' file upload failed.",
+    "submit": "Submit",
+    "f_name": "First name",
+    "l_name": "Last name",
+    "email": "Email",
+    "description": "Description",
+    "apply_for_job": "Apply for job",
+    "required_messege": "${name} is required!",
+    "type_messege": "${name} is not valid",
+    "apply_done": "Thanks, we will contact you as soon as possible"
+}

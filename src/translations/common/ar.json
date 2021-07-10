@@ -1,0 +1,30 @@
+{
+  "show_more": "عرض المزيد",
+  "to": "الى",
+  "add_to_card": "الاضافة الى السلّة",
+  "introduction": "لمحة تعريفية",
+  "loading_date": "تحميل البيانات",
+  "added-to-cart": "تمت الاضافة الى عربة التسوق",
+  "added-to-cart-desc": "تمت اضافة المنتج الى السلة بنجاح",
+  "error": {
+    "network_error": "خطأ في الشبكة",
+    "network_error_des": "خطأ غير معروف",
+    "added-to-cart-failed": "حدث خطأ, يرجى التأكد من الكمية",
+    "added-to-cart-failed-desc": "الكمية يجب ان تكون اكبر من الصفر"
+  },
+  "contact-information": "معلومات الاتصال",
+  "not-auth": "غير مصرح به",
+  "need-auth": "عذراً، أنت غير مصرح بك للوصول لهذه الصفحة",
+  "login": "تسجيل الدخول",
+  "back": "الرجوع",
+  "search": "بحث",
+  "input_product_name": "أدخل اسم المنتج",
+  "blogs": "المدونة",
+  "events": "المناسبات",
+  "products_statistics": "المنتجات المباعة بالشهر",
+  "buyer_statistics": "اكثر المستخدمين نشاطا",
+  "Icon size should be 24x24 at most": "يجب أن يكون حجم الرمز 24 × 24 كحد أقصى",
+  "confirm_delete": "Confirm delete",
+  "are_u_sure": "By confirmation this gift item will be deleted along with all gifts associated with it",
+  "This page could not be found | 404": "هذه الصفحة غير موجودة | 404"
+}

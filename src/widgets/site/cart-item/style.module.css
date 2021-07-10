@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #aba8a8;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.parahraph_sm {
+  flex: 0 0 16.66%;
+}
+
+.parahraph {
+  flex: 0 0 24.5%;
+}
+
+.main_color {
+  color: #2b2e83;
+}
+
+.amount_container {
+}

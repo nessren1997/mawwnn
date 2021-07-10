@@ -1,0 +1,91 @@
+{
+  "shopping-cart": "Shopping Cart",
+  "empty-cart": "Your Cart Is Empty",
+  "discount": "Discount",
+  "step-one-header": {
+    "image": "Image",
+    "amount": "Amount",
+    "price": "Price",
+    "description": "Description",
+    "total": "Total"
+  },
+  "step-one-footer": {
+    "total": "total"
+  },
+  "voucher-card": "Voucher Card",
+  "voucher_code": "Voucher code",
+  "enter-voucher-card": "Enter Your Voucher Card",
+  "details-form": {
+    "total": "Total",
+    "delivery": "Delivery",
+    "free": "Free",
+    "complete-order": "Complete order"
+  },
+  "verify": "Verify",
+  "cod": "Cash On Delivery",
+  "confirmation": "Confirmation",
+  "cod-info": "Delivery Info",
+  "order-details": "Order Details",
+  "cart-forms": {
+    "last-name": "Last Name",
+    "first-name": "First Name",
+    "delivery-date": "Delivery Date",
+    "save-info": "save this info",
+    "back-shopping": "Back To Shopping",
+    "confirm": "Confirm",
+    "governorate": "Governorate",
+    "address": "Address",
+    "mobile": "Mobile",
+    "enter-confirmation": "Please Enter The Confirmation Code",
+    "phone-number": "The Provided Phone Number Is Invaled"
+  },
+  "cart-errors": {
+    "address": "Please Input Your Address!",
+    "last-name": "Please Input Your Last Name!",
+    "first-name": "Please Input Your First Name!",
+    "governorate": "Please Input Your Governorate!",
+    "delivery-date": "Please Input Delivery Date!",
+    "mobile": "Please Input Mobile Number!",
+    "order-sent-failed": "Order Couldn't Be Sent",
+    "invalid-number": "The Phone Number Is Invalid",
+    "invalid-date": "Invalid Delivery Date. Please, Select A Date That's After Today"
+  },
+  "verification-text": "You'll recieve a text message on your phone with confirmation code",
+  "verification-resend": "If you didn't recieve the confirmation message",
+  "click-here": "click here",
+  "thank-you-page": {
+    "thanks-message": "Thank You For Trusting MWAN Company for Trading and Industry",
+    "order-sent-success": "Your Order Has Been Sent Successfully",
+    "total-price": "Total Price",
+    "order-num": "Your Order Number is",
+    "note": "Note: You Can Check Your Order Status Using The Order Number"
+  },
+  "free-delivery": "free",
+  "quantity": "quantity ${num}",
+  "coupon-success": "Redeemed Successfully",
+  "coupon-success-desc": "The Coupon Has Been Redeemed Successfully",
+  "coupon-failed": "Failed To Redeem Coupon",
+  "coupon-failed-desc": "The Coupon You've Provided Is Invalid",
+  "login-to-use-coupon-desc": "Please Login To Redeem Coupon",
+  "order-success-desc": "Your Order Has Been Sent Successfully",
+  "order-success": "Order Sent",
+  "verification-success": "Verification Code Accepted",
+  "verification-success-desc": "Your Order Has Been Verified",
+  "verification-failed": "Invalid Verification Code",
+  "verification-failed-desc": "The Verification Code You've Entered Is Invalid",
+  "sorry": "Sorry",
+  "min_price": "Total price should be ${price} at least",
+  "phone-help": " ex : +9639XXXXXXXX",
+  "you-can-view": "Click to see your order status",
+  "note-save-this-url": "Note: save this url to view the status later",
+  "new-step-two": {
+    "auth": {
+      "title": "Complate order need you to be loged in",
+      "login": "Login"
+    }
+  },
+  "Add new address": "Add new address",
+  "address": "Address",
+  "add": "Add",
+  "please_enter_address": "Please enter address"
+}

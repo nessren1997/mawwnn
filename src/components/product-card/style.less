@@ -1,0 +1,60 @@
+.card-container {
+  width: 250px;
+  min-height: 400px;
+  height: min-content;
+  background-color: #eaeaea;
+  margin: 18px 10px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px #0000003b;
+  transition: box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.card-container:hover {
+  box-shadow: 0px 15px 30px #0000003b;
+}
+.card-image {
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  min-height: 230px;
+  cursor: pointer;
+}
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #8d2cd3;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 12px 12px 0 0;
+  transition: background-color 0.2s;
+}
+.add-to-cart-btn:hover {
+  background-color: #f93e4f;
+}
+.add-to-cart-btn:active {
+  background-color: #9d61c9;
+}
+.discreption-card {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+  font-weight: 600;
+  min-height: 64px;
+  justify-content: center;
+}
+.amount {
+  width: 50%;
+  height: 32px;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #fff;
+}

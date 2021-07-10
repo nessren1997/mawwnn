@@ -1,0 +1,14 @@
+{
+    "upload_cv": "انقر لتحميل سيرتك الذاتية",
+    "upload_sucsess": "تم رفع الملف '${name}' بنجاح.",
+    "upload_failed": "فشل رفع الملف.'${name}'",
+    "submit": "ارسال",
+    "f_name": "الاسم الأول",
+    "l_name": "الاسم الأخير",
+    "email": "الايميل",
+    "description": "تفاصيل",
+    "apply_for_job": "التقدم لوظيفة",
+    "required_messege": "${name} مطلوب",
+    "type_messege": "${name} ليس صحيح",
+    "apply_done": "شكرا ، سيتم التواصل معك بأقرب وقت"
+}

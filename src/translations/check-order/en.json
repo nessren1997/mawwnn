@@ -1,0 +1,10 @@
+{
+  "number": "please enter order's number",
+  "send": "Send",
+  "verify": "Verify",
+  "verify_my_order": "Verify my order",
+  "enter_verify_code": "Enter verify code",
+  "or": "or",
+  "check": "Check",
+  "order-not-found": "order number not vaild"
+}

@@ -1,0 +1,13 @@
+.step {
+  flex: 0 0 30%;
+  border-bottom: 4px solid transparent;
+  padding-top: 10px;
+}
+
+.text_and_icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  position: relative;
+}

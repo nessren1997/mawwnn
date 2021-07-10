@@ -1,0 +1,8 @@
+{
+    "verfiy": "verfiy",
+    "verfyCode": "enter verfiy code",
+    "errorVer": "the verfiy code is not valid",
+    "otpReq": "the verfiy code is required",
+    "resend the code": "Resend the code",
+    "code sent successfully": "Code sent successfully"
+}

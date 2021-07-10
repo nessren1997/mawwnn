@@ -1,0 +1,191 @@
+@import '../constants/layout/color.less';
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Cocon Next Arabic' !important;
+  background-color: #fff;
+}
+// @font-face {
+//   font-family: 'Cocon Next Arabic';
+//   src: url('//db.onlinewebfonts.com/t/4ce5fad2df30ef4ed5ee61f579ee24b7.eot');
+//   src: url('//db.onlinewebfonts.com/t/4ce5fad2df30ef4ed5ee61f579ee24b7.eot?#iefix')
+//       format('embedded-opentype'),
+//     url('//db.onlinewebfonts.com/t/4ce5fad2df30ef4ed5ee61f579ee24b7.woff2')
+//       format('woff2'),
+//     url('//db.onlinewebfonts.com/t/4ce5fad2df30ef4ed5ee61f579ee24b7.woff')
+//       format('woff'),
+//     url('//db.onlinewebfonts.com/t/4ce5fad2df30ef4ed5ee61f579ee24b7.ttf')
+//       format('truetype'),
+//     url('//db.onlinewebfonts.com/t/4ce5fad2df30ef4ed5ee61f579ee24b7.svg#Cocon Next Arabic')
+//       format('svg');
+// }
+
+@font-face {
+  font-family: 'Cocon Next Arabic';
+  src: url('/fonts/cocon.woff');
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  box-shadow: 0 0 0 2px transparent;
+  outline: none;
+  border-color: transparent;
+}
+
+.customeSelect > .ant-select-selector {
+  border: none !important;
+  height: 42px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border-top-left-radius: 25px !important;
+  border-bottom-left-radius: 25px !important;
+  // padding-top: 4px !important;
+  direction: ltr;
+}
+
+// .ant-menu-item.ant-menu-item-only-child,
+// .ant-menu.ant-menu-sub.ant-menu-vertical {
+//   background-color: #3f428f;
+// }
+
+.ant-menu-submenu-title > span {
+  font-size: 1.1rem;
+  color: #fff;
+  display: inline-block;
+  padding-top: 2;
+}
+
+.form_select.ant-select-single.ant-select-show-arrow > .ant-select-selector {
+  border-radius: 25px;
+}
+
+.select_container .ant-select.form_select.ant-select-single.ant-select-show-arrow .ant-select-selector {
+  height: 47px;
+  padding: 8px 20px;
+}
+
+.customeSelect .ant-select-selection-placeholder {
+  padding-top: 3px !important;
+  padding-right: 10pt !important;
+}
+
+.ant-col.select_container > .ant-select.ant-select-rtl.form_select.ant-select-single.ant-select-show-arrow > .ant-select-arrow {
+  left: 20px;
+}
+
+.ant-divider.ant-divider-vertical {
+  border-width: 2px;
+  border-color: #e7e7e7;
+  height: 100%;
+}
+
+.empty_cart {
+  color: #7676769e !important;
+}
+.customeSelect > .ant-select-selector {
+  padding: 4px 14px !important;
+}
+
+.customeSelect > .ant-select-selector > .ant-select-selection-item {
+  padding: 3px 14px 0 16px !important;
+}
+
+.userSectionSpace .ant-space-item {
+  display: flex;
+}
+
+.ant-scroll-number.ant-badge-count.ant-badge-multiple-words {
+  padding: 0;
+}
+
+.verify:hover,
+.verify:focus,
+.verify:active {
+  background-color: lighten(#2b2e83, 15%);
+  color: #fff;
+}
+
+.completeOrderBtn:hover,
+.completeOrderBtn:active,
+.completeOrderBtn:focus {
+  background-color: lighten(#458100, 5%);
+  color: #fff;
+}
+
+.noResultsText {
+  color: #33333399 !important;
+}
+
+.badge.userButtonIcon {
+  position: relative;
+  left: -8px;
+  top: -6px;
+}
+
+.badge.userButtonIcon.ant-btn-rtl {
+  left: 8px !important;
+}
+
+// Custome Scroller
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #e7e7e7;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: darken(#c1c1c1, 10%);
+}
+@media screen {
+  .noPrint {
+    display: unset;
+  }
+}
+
+@media print {
+  .noPrint {
+    display: none;
+  }
+}
+.ant-badge-count {
+  overflow: visible !important;
+}
+.ant-badge-count::before {
+  border: 10px solid #ff4f51;
+  content: '';
+  left: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  transition: all 1s;
+  animation: badge 1.5s infinite;
+  z-index: -10;
+}
+@keyframes badge {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

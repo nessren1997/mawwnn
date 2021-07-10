@@ -1,0 +1,28 @@
+{
+  "show_more": "Show More",
+  "to": "to",
+  "add_to_card": "Add To Cart",
+  "introduction": "Introduction",
+  "loading_date": "Loading data",
+  "added-to-cart": "Product Added To Cart",
+  "added-to-cart-desc": "Product Added To Cart Successfully",
+  "error": {
+    "network_error": "Network error",
+    "network_error_des": "Unrecognised error",
+    "added-to-cart-failed": "error. please check quantity",
+    "added-to-cart-failed-desc": "The Quantity Should Be At Least One"
+  },
+  "contact-information": "Contact Information",
+  "not-auth": "Not Authanticated",
+  "need-auth": "Sorry, you are not authorized to access this page.",
+  "login": "Login",
+  "back": "Go Back",
+  "search": "Search",
+  "input_product_name": "Input product name",
+  "blogs": "Blogs",
+  "events": "Events",
+  "products_statistics": "Products sold per month",
+  "buyer_statistics": "The most active users",
+  "Icon size should be 24x24 at most": "Icon size should be 24x24 at most",
+  "This page could not be found | 404": "This page could not be found | 404"
+}

@@ -1,0 +1,65 @@
+.divider {
+  background-color: rgb(255 255 255);
+  display: inline-block;
+  width: 2px;
+  height: 28px;
+  margin: 8px 18px;
+}
+
+.phoneAndEmail {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.flex_container {
+  display: flex;
+  justify-content: center;
+}
+
+.select {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 5px 5px 5px 15px;
+  border: none;
+  outline: none;
+}
+
+.searchBarBtn {
+  border-radius: 0px !important;
+  border: none !important;
+  color: #333 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background-color: #fff !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.searchBtn {
+  width: 50px !important;
+  padding: 24px 13px 18px 12px !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  border-top-right-radius: 25px !important;
+  border-bottom-right-radius: 25px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.drawer_link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #989898;
+  padding-bottom: 15px;
+  margin: 10px auto 15px !important;
+  color: #fff;
+}
+
+.avatar_container {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 25px 0;
+}

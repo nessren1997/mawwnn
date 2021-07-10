@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="684" viewBox="0 0 1440 684">
+  <defs>
+    <filter id="_404" x="-35" y="-219" width="1507" height="1373" filterUnits="userSpaceOnUse">
+      <feOffset dy="92" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="126" result="blur"/>
+      <feFlood flood-color="#ddd"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-_404_Page_v01_1">
+      <rect width="1440" height="684"/>
+    </clipPath>
+  </defs>
+  <g id="_404_Page_v01_1" data-name="404 Page v01 – 1" clip-path="url(#clip-_404_Page_v01_1)">
+    <g id="_404_Text" data-name="404 Text" transform="translate(-0.111 -0.432)">
+      <circle id="Oval" cx="110" cy="110" r="110" transform="translate(1220.111 234.432)" fill="#eaf4f8"/>
+      <g transform="matrix(1, 0, 0, 1, 0.11, 0.43)" filter="url(#_404)">
+        <text id="_404-2" data-name="404" transform="translate(343 568)" fill="#f2f2f2" font-size="464" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">404</tspan></text>
+      </g>
+      <circle id="Oval-2" data-name="Oval" cx="30" cy="30" r="30" transform="translate(926.111 38.432)" fill="#f7ede6"/>
+      <circle id="Oval-3" data-name="Oval" cx="16" cy="16" r="16" transform="translate(291.111 495.432)" fill="#f7ede6"/>
+      <path id="Triangle" d="M23.3,0,46.6,46.6H0Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 327.159, 0.404)" fill="#ccdac4"/>
+      <path id="Triangle-2" data-name="Triangle" d="M64.077,0l64.077,128.154H0Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 33.28, 187.84)" fill="#ded6dc"/>
+      <path id="Triangle-3" data-name="Triangle" d="M23.3,0,46.6,46.6H0Z" transform="translate(1428.034 113.407) rotate(135)" fill="#ded6dc"/>
+    </g>
+  </g>
+</svg>
