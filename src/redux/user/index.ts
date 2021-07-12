@@ -65,6 +65,8 @@ export const InsertUserAsync = (req: User_I_Req): AppThunk => async (
 ) => {
   dispatch(setStatus('loading'));
   const result = await userService.Insert(req);
+  console.log("res", result);
+  
   if (isError(result)) {
     ApiErrorNotification(result);
     dispatch(setStatus('error'));
@@ -119,6 +121,8 @@ export const DeleteUserAsync = (req: User_D_Req): AppThunk => async (
 export const FetchUsersAsync = (): AppThunk => async (dispatch) => {
   dispatch(setStatus('loading'));
   const result = await userService.Fetch();
+  console.log("redux", result);
+  
   if (isError(result)) {
     ApiErrorNotification(result);
     dispatch(setStatus('error'));

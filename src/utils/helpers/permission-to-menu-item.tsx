@@ -27,7 +27,8 @@ export const PermissionToMenuItem = (per: string) => {
       return tmp("coupons", "Coupons");
 
     case "see gifts" || "manage gifts" || "manage cities":
-      return [tmp("gifts", "Gifts"), tmp("winners", "Winners"), tmp("gifts-items", "Gift Items"), tmp("cities", "Cities")];
+      // return [tmp("gifts", "Gifts"), tmp("winners", "Winners"), tmp("gifts-items", "Gift Items"), tmp("cities", "Cities")];
+      return [tmp("gifts", "Gifts"), tmp("gifts-items", "Gift Items"), tmp("cities", "Cities")];
 
     case "manage events":
       return tmp("events", "Events");
@@ -52,5 +53,8 @@ export const PermissionToMenuItem = (per: string) => {
 
     case "manage delivery centers":
       return tmp("receiving-centers", "reciving_centers");
+
+    case "see winners":
+      return [tmp("winners", "Winners")];
   }
 };

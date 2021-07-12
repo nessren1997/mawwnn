@@ -10,6 +10,8 @@ export interface City {
   name?: string;
   'name:ar'?: string;
   'name:en'?: string;
+  cities: {id :number}[];
+  is_allowed_for_order: 1 | 0
 }
 
 //---------------City-I-Req.ts---------------

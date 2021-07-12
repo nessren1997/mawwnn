@@ -1,14 +1,14 @@
-import { Form, Checkbox, Input, InputNumber, DatePicker, Select, Col, Modal } from 'antd';
-import React, { useEffect, useState } from 'react';
-import { FormInstance } from 'antd/lib/form';
-import { CustomUpload } from './CustomComponent/CustomUpload';
-import { ItemType } from './types';
+import { Form, Checkbox, Input, InputNumber, DatePicker, Select, Col, Modal } from "antd";
+import React, { useEffect, useState } from "react";
+import { FormInstance } from "antd/lib/form";
+import { CustomUpload } from "./CustomComponent/CustomUpload";
+import { ItemType } from "./types";
 // import HTMLEditor from './CustomComponent/HTMLEditor';
-import { DATE_FORMAT } from '../../constants/keys';
-import FileToBase64 from '../helpers/file-to-base64';
-import { UploadFile } from 'antd/lib/upload/interface';
-import CustomMultiImageUpload from './CustomComponent/custom-multi-image-upload';
-import { HtmlEditor } from './CustomComponent/html-editor';
+import { DATE_FORMAT } from "../../constants/keys";
+import FileToBase64 from "../helpers/file-to-base64";
+import { UploadFile } from "antd/lib/upload/interface";
+import CustomMultiImageUpload from "./CustomComponent/custom-multi-image-upload";
+import { HtmlEditor } from "./CustomComponent/html-editor";
 
 const { Option } = Select;
 
@@ -16,41 +16,48 @@ export const MapIntoFormItems: React.FC<{
   itemsHeader: ItemType[];
   form?: FormInstance;
   allDisabled?: true;
-  type?: 'insert' | 'update' | 'show';
-}> = ({ itemsHeader, form, allDisabled, type = 'show' }) => {
+  type?: "insert" | "update" | "show";
+}> = ({ itemsHeader, form, allDisabled, type = "show" }) => {
   const [result, setResult] = useState<any[]>([]);
   const [preview, setPreview] = useState<{ previewVisible: boolean; previewImage?: string; previewTitle?: string }>({
     previewVisible: false,
-    previewImage: '',
-    previewTitle: '',
+    previewImage: "",
+    previewTitle: "",
   });
 
   useEffect(() => {
     //give it itemType return a form.item
-    const formItem = (el: ItemType, key: string, localKey = '') => {
-      const dataIndex = el.columnType.dataIndex + '' + localKey;
-      const label = el.columnType.title + '' + localKey;
+    const formItem = (el: ItemType, key: string, localKey = "") => {
+      const dataIndex = el.columnType.dataIndex + "" + localKey;
+      const label = el.columnType.title + "" + localKey;
 
       const required = el.required ?? true;
 
       if (el.demo === true) return undefined;
+
+      if (el.ignore) {
+        if (el.ignore === true) return undefined;
+        if ("insert" in el.ignore && type === "insert") return undefined;
+        if ("update" in el.ignore && type === "update") return undefined;
+      }
+
       switch (el.type) {
-        case 'primary-key':
+        case "primary-key":
           return (
             <Col span={24}>
               <Form.Item key={key} label={label} name={dataIndex}>
-                <InputNumber disabled style={{ width: '100%' }} />
+                <InputNumber disabled style={{ width: "100%" }} />
               </Form.Item>
             </Col>
           );
 
-        case 'select':
-        case 'foreign-key-obj':
-        case 'foreign-key':
+        case "select":
+        case "foreign-key-obj":
+        case "foreign-key":
           return (
             <Col span={12}>
               <Form.Item key={key} label={label} name={dataIndex} rules={[{ required }]}>
-                <Select disabled={allDisabled} style={{ width: '100%' }}>
+                <Select disabled={allDisabled} style={{ width: "100%" }}>
                   {el.foreignKeyArr &&
                     el.foreignKeyArr.map((el) => (
                       <Option key={el.value} value={el.value}>
@@ -62,16 +69,16 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'number':
+        case "number":
           return (
             <Col span={12}>
               <Form.Item key={key} label={label} name={dataIndex} rules={[{ required }]}>
-                <InputNumber disabled={allDisabled} style={{ width: '100%' }} />
+                <InputNumber disabled={allDisabled} style={{ width: "100%" }} />
               </Form.Item>
             </Col>
           );
 
-        case 'text':
+        case "text":
           return (
             <Col span={12}>
               <Form.Item key={key} label={label} name={dataIndex} rules={[{ required }]}>
@@ -80,7 +87,7 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'text-not-required':
+        case "text-not-required":
           return (
             <Col span={12}>
               <Form.Item key={key} label={label} name={dataIndex}>
@@ -89,7 +96,7 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'text-area':
+        case "text-area":
           return (
             <Col span={24}>
               <Form.Item key={key} label={label} name={dataIndex} rules={[{ required }]}>
@@ -98,7 +105,7 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'image':
+        case "image":
           return (
             <Col span={12}>
               <Form.Item key={key} label={label} name={dataIndex} rules={[{ required }]}>
@@ -107,7 +114,7 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'multi-images':
+        case "multi-images":
           return (
             <Col span={12}>
               <Form.Item key={key} label={label} name={dataIndex} rules={[{ required }]}>
@@ -116,11 +123,11 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'selectable-multi-foreign-key':
+        case "selectable-multi-foreign-key":
           return (
             <Col span={12}>
               <Form.Item key={key} label={label} name={dataIndex} /*rules={[{ required }]}*/>
-                <Select mode='multiple' disabled={allDisabled} style={{ width: '100%' }}>
+                <Select mode="multiple" disabled={allDisabled} style={{ width: "100%" }}>
                   {el.foreignKeyArr &&
                     el.foreignKeyArr.map((el) => (
                       <Option key={el.value} value={el.value}>
@@ -132,11 +139,11 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'signable-multi-foreign-key':
+        case "signable-multi-foreign-key":
           return (
             <Col span={12}>
               <Form.Item key={key} label={label} name={dataIndex} rules={[{ required }]}>
-                <Select mode='tags' disabled={allDisabled} style={{ width: '100%' }}>
+                <Select mode="tags" disabled={allDisabled} style={{ width: "100%" }}>
                   {el.foreignKeyArr &&
                     el.foreignKeyArr.map((el) => (
                       <Option key={el.value} value={el.value}>
@@ -148,25 +155,25 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'date':
+        case "date":
           return (
             <Col span={12}>
               <Form.Item key={key} label={label} name={dataIndex} rules={[{ required }]}>
-                <DatePicker disabled={allDisabled} format={DATE_FORMAT} style={{ width: '100%' }} />
+                <DatePicker disabled={allDisabled} format={DATE_FORMAT} style={{ width: "100%" }} />
               </Form.Item>
             </Col>
           );
 
-        case 'check-box':
+        case "check-box":
           return (
             <Col span={12}>
-              <Form.Item key={key} label={undefined} name={dataIndex} valuePropName='checked'>
+              <Form.Item key={key} label={undefined} name={dataIndex} valuePropName="checked">
                 <Checkbox disabled={allDisabled}>{label}</Checkbox>
               </Form.Item>
             </Col>
           );
 
-        case 'html-editor':
+        case "html-editor":
           return (
             <Col span={24}>
               <Form.Item key={key} label={label} name={dataIndex} rules={[{ required }]}>
@@ -175,7 +182,7 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'dynamic-list':
+        case "dynamic-list":
           return (
             <Col span={24}>
               <Form.List key={key} name={dataIndex}>
@@ -184,7 +191,7 @@ export const MapIntoFormItems: React.FC<{
             </Col>
           );
 
-        case 'no-thing':
+        case "no-thing":
           return undefined;
 
         // case 'rules':
@@ -197,16 +204,16 @@ export const MapIntoFormItems: React.FC<{
 
     let res: React.ReactNode[] = itemsHeader.map((el, ind) => {
       if (el.customFormItem) {
-        if ('insert' in el.customFormItem && type === 'insert') return el.customFormItem;
-        if ('update' in el.customFormItem && type === 'update') return el.customFormItem;
+        if ("insert" in el.customFormItem && type === "insert") return el.customFormItem;
+        if ("update" in el.customFormItem && type === "update") return el.customFormItem;
         else return el.customFormItem;
       }
 
       if (el.trans)
         return (
           <>
-            {formItem(el, `FI${ind}AR`, ':ar')}
-            {formItem(el, `FI${ind}EN`, ':en')}
+            {formItem(el, `FI${ind}AR`, ":ar")}
+            {formItem(el, `FI${ind}EN`, ":en")}
           </>
         );
       else return formItem(el, `FI${ind}`);
@@ -222,7 +229,7 @@ export const MapIntoFormItems: React.FC<{
     setPreview({
       previewImage: file.url || file.preview,
       previewVisible: true,
-      previewTitle: file.name || file.url?.substring(file.url.lastIndexOf('/') + 1),
+      previewTitle: file.name || file.url?.substring(file.url.lastIndexOf("/") + 1),
     });
   };
 
@@ -235,7 +242,7 @@ export const MapIntoFormItems: React.FC<{
         footer={null}
         onCancel={() => setPreview({ ...preview, previewVisible: false })}
       >
-        <img alt='example' style={{ width: '100%' }} src={preview.previewImage} />
+        <img alt="example" style={{ width: "100%" }} src={preview.previewImage} />
       </Modal>
     </>
   );

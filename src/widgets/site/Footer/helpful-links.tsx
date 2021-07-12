@@ -39,7 +39,7 @@ const HelpfulLinks: FC = () => {
               <Link {...linkLayout}>{t("privacy-policy")}</Link>
             </NextLink>
 
-            <NextLink href={"/deleteIF"}>
+            <NextLink href={"/how-to-delete-your-facebook-data"}>
               <Link {...linkLayout}>{t("delete-information-facebook")}</Link>
             </NextLink>
           </Space>
@@ -89,7 +89,7 @@ const HelpfulLinks: FC = () => {
         <Col lg={6} md={8} sm={10} xs={24}>
           <Link href="/">
             <Button size="small" type="text" style={{ height: "fit-content", width: "fit-content" }}>
-              <Image width={"70%"} preview={false} src="/assets/mwan-footer-logo.png" />
+              <Image width={"70%"} preview={false} src="/assets/dtic-footer-logo.png" />
             </Button>
           </Link>
         </Col>

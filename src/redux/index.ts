@@ -1,5 +1,4 @@
 export * from './app';
-export * from './cities';
 export * from './blog';
 export * from './brand';
 export * from './category';

@@ -12,6 +12,8 @@ import {
 class RoleService extends ApiService {
   constructor() {
     super({ baseURL: `/api/proxy/api` });
+    // super({ baseURL: `${process.env.NEXT_PUBLIC_PATH}api/proxy/api` });
+
   }
 
   public Fetch = async (): Promise<ApiResult<Role[]>> =>

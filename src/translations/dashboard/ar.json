@@ -156,6 +156,7 @@
     "Coupons": "كوبونات",
     "Gifts": "الهدايا",
     "Winners": "الفائزين",
+    "WinnersDelivered": "الفائزين",
     "Gift Items": "عناصر الهدايا",
     "Orders": "الطلبات",
     "Categories": "الفئات",
@@ -184,5 +185,9 @@
     "closed_number_winners": "رقم مغلق",
     "wrong_number_winners": "رقم غير صحيح",
     "for contact": "للتواصل",
-    "or": "أو"
+    "or": "أو",
+    "cities_allowed":"المدن المسموح لها بالشحن",
+    "All_Cities":"كل المدن",
+    "is_allowed_for_order":"مسموح للطلب"
+
 }

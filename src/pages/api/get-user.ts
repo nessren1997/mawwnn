@@ -4,7 +4,7 @@ import { KEY_USER_COOKIE } from '../../constants/keys';
 import ApiResponseDone from '../../utils/api/models/api-response-done';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const cookies = new Cookies(req, res);
+  const cookies = new Cookies(req, res);  
   const user = cookies.get(KEY_USER_COOKIE);
   if (user) {
     return res.status(200).json({

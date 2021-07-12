@@ -128,6 +128,6 @@ export const FetchCitiesAsync = (): AppThunk => async (dispatch) => {
   }
 };
 
-export const selectCities = (state: RootState) => state.Cities;
+export const selectCities = (state: RootState) => state.Cities; 
 
 export default CitiesSlice.reducer;

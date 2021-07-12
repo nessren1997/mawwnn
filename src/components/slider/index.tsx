@@ -1,11 +1,16 @@
-import React, { FC, useRef } from "react";
-import { Button, Carousel } from "antd";
-import { CaretLeftOutlined, CaretRightFilled } from "@ant-design/icons";
-import "./style.less";
+import React, { FC, useRef } from 'react';
+import { Button, Carousel } from 'antd';
+import { CaretLeftOutlined, CaretRightFilled } from '@ant-design/icons';
+import './style.less';
 
 interface props {}
 
-const SlickButtonFix = ({ currentSlide, slideCount, children, ...props }: any) => <span {...props}>{children}</span>;
+const SlickButtonFix = ({
+  currentSlide,
+  slideCount,
+  children,
+  ...props
+}: any) => <span {...props}>{children}</span>;
 
 const Slider: FC<props> = (props) => {
   const nextBtn = useRef<HTMLHeadingElement>(null);
@@ -17,9 +22,9 @@ const Slider: FC<props> = (props) => {
         onClick={() => {
           prevBtn.current?.click();
         }}
-        className="prev-arrow"
+        className='prev-arrow'
       />
-      <div className="slider">
+      <div className='slider'>
         <Carousel
           draggable={true}
           arrows={true}
@@ -65,7 +70,10 @@ const Slider: FC<props> = (props) => {
           {props.children}
         </Carousel>
       </div>
-      <CaretRightFilled onClick={() => nextBtn.current?.click()} className="next-arrow" />
+      <CaretRightFilled
+        onClick={() => nextBtn.current?.click()}
+        className='next-arrow'
+      />
     </>
   );
 };

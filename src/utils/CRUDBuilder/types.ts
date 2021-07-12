@@ -31,6 +31,8 @@ export interface ItemType {
   demo?: boolean;
   hidden?: boolean;
   customFormItem?: React.ReactElement | { insert: React.ReactElement; update: React.ReactElement };
+  ignore?: true | { update?: true; insert?: true };
+
 
   // make the field is not required in add & edit form
   required?: boolean;

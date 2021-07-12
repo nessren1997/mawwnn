@@ -2,8 +2,8 @@ import React, { FC, useEffect, useState } from "react";
 import { Layout as AntLayout, Spin } from "antd";
 import Head from "next/head";
 
-import MAWNHeader from "./site/nav-bar";
-import MAWNFooter from "./site/Footer";
+import DTICHeader from "./site/nav-bar";
+import DTICFooter from "./site/Footer";
 import { useRouter } from "next/router";
 import DahsboardLayout from "./dashboard";
 import { appServices } from "../services";
@@ -15,7 +15,7 @@ import { LoadingOutlined } from "@ant-design/icons";
 
 const { Header, Footer, Content } = AntLayout;
 
-const MAWNLayout: FC<{ children: React.ReactNode; title?: string }> = ({ children, title = "MAWN" }) => {
+const DTICLayout: FC<{ children: React.ReactNode; title?: string }> = ({ children, title = "DTIC" }) => {
   const dispatch = useDispatch();
   const { route } = useRouter();
   const arr = route.match(/dashboard/g);
@@ -75,7 +75,7 @@ const MAWNLayout: FC<{ children: React.ReactNode; title?: string }> = ({ childre
     ) : (
       <AntLayout style={{ minHeight: "100vh" }}>
         <Header style={{ padding: 0, height: "100%" }}>
-          <MAWNHeader />
+          <DTICHeader />
         </Header>
         <Content
           style={{
@@ -87,7 +87,7 @@ const MAWNLayout: FC<{ children: React.ReactNode; title?: string }> = ({ childre
           {children}
         </Content>
         <Footer style={{ padding: "10px 0px", background: "#fff" }}>
-          <MAWNFooter />
+          <DTICFooter />
         </Footer>
       </AntLayout>
     );
@@ -113,4 +113,4 @@ const MAWNLayout: FC<{ children: React.ReactNode; title?: string }> = ({ childre
     </Spin>
   );
 };
-export default MAWNLayout;
+export default DTICLayout;

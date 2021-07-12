@@ -5,6 +5,8 @@ export interface User_Req {
   last_name: string;
   phone: string;
   password: string;
+  city_id: number;
+
 }
 
 //---------------User.ts---------------
@@ -15,6 +17,8 @@ export interface User {
   last_name: string;
   phone: string;
   city_id: number;
+  missing_params:boolean;
+  facebook: boolean;
 
   permissions: { name: string }[];
 
@@ -29,6 +33,9 @@ export interface User {
     name: string;
     permissions: { name: string }[];
   }[];
+
+  cities: {id :number}[];
+
 }
 
 //---------------User-I-Req.ts---------------

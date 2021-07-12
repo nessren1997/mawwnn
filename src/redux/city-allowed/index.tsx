@@ -64,4 +64,6 @@ export const FetchCitiesAllowedAsync = (): AppThunk => async (dispatch) => {
   }
 };
 
+export const selectCitiesAllowedStatus = (state: RootState) => state.CitiesAllowed;
+
 export default CitiesAllowedSlice.reducer;

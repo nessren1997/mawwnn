@@ -155,6 +155,7 @@
     "Coupons": "Coupons",
     "Gifts": "Gifts",
     "Winners": "Winners",
+    "WinnersDelivered": "Winners",
     "Gift Items": "Gift Items",
     "Orders": "Orders",
     "Categories": "Categories",
@@ -183,5 +184,8 @@
     "closed_number_winners": "Closed number",
     "wrong_number_winners": "Wrong number",
     "for contact": "For contact",
-    "or": "or"
+    "or": "or",
+    "cities_allowed":"cities allowed to shipped",
+    "All_Cities": "All Cities",
+    "is_allowed_for_order": "Is Allowed For Order"
 }

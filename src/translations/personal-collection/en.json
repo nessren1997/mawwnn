@@ -37,5 +37,12 @@
     "rejected": "Rejected"
   },
   "need-verify": "Need verify?",
-  "verify": "Verify"
+  "verify": "Verify",
+  "deletefi": "Do you want to delete your Facebook account data from our websitep",
+  "delete": "Delete",
+  "city": "City",
+  "deleteIF": "Delete Facebook Account",
+  "facebookaccount": "You Are Not Registered With A Facebook Account",
+  "compleate-registration" : "To complete the registration process",
+  "phone-city": "please enter your phone number and city name"
 }

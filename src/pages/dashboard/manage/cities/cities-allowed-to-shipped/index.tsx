@@ -1,7 +1,12 @@
 import useTranslation from "next-translate/useTranslation";
 import React, { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FetchCitiesAllowedAsync } from "../../../../../redux";
+import {
+  FetchCitiesAllowedAsync,
+  FetchCitiesAsync,
+  selectCitiesAllowedStatus,
+  UpdateCityAllowedAsync,
+} from "../../../../../redux";
 import CRUDBuilder from "../../../../../utils/CRUDBuilder/CRUDBuilder";
 import { ItemType } from "../../../../../utils/CRUDBuilder/types";
 
@@ -10,22 +15,24 @@ const CitiesAllowed = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation("dashboard");
 
-  //   useEffect(() => {
-  //       dispatch(FetchCitiesAllowedAsync());
-  //   }, [dispatch]);
+  const { citiesallowed, status } = useSelector(selectCitiesAllowedStatus);
 
-  const citiesallowed = [
-    {
-      id: 2,
-      name: "Damascus",
-      is_allowed_for_order: 0,
-    },
-    {
-      id: 3,
-      name: "Homs",
-      is_allowed_for_order: 1,
-    },
-  ];
+  useEffect(() => {
+    dispatch(FetchCitiesAllowedAsync());
+  }, [dispatch]);
+
+  // const citiesallowed = [
+  //   {
+  //     id: 2,
+  //     name: "Damascus",
+  //     is_allowed_for_order: 0,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Homs",
+  //     is_allowed_for_order: 1,
+  //   },
+  // ];
 
   const columnsCitiesAllowed: ItemType[] = [
     {
@@ -40,10 +47,11 @@ const CitiesAllowed = () => {
     {
       columnType: {
         title: t`name`,
-        dataIndex: "name",
+        dataIndex: "name:en",
         width: "auto",
       },
       type: "text",
+      ignore: true,
     },
     {
       columnType: {
@@ -59,12 +67,11 @@ const CitiesAllowed = () => {
     <CRUDBuilder
       lang={lang === "en" ? "en" : "ar"}
       items={citiesallowed}
-      loading={false}
-      //   AddAsync={(el) => InsertCityAsync({ city: el.item })}
-      //   UpdateAsync={(el) => UpdateCityAsync({ city: el.item, id: el.id })}
-      // DeleteAsync={(el) => DeleteCityAsync({ id: el.id })}
+      loading={status === "loading"}
+      UpdateAsync={(el) => UpdateCityAllowedAsync({ cityallowed: el.item })}
       itemsHeader={columnsCitiesAllowed}
     />
   );
 };
+
 export default CitiesAllowed;

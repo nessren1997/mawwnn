@@ -1,12 +1,12 @@
-import { SITE_LANGUAGE } from '../../constants/keys';
-import { Login_Res, Register_Req, User } from '../../models';
-import Login_Req from '../../models/auth/login-req';
-import ApiService from '../../utils/api/api-service';
-import ApiResult from '../../utils/api/models/api-result';
-import Update_Req from '../../models/update-user-info/update-req';
-import ResetReq from '../../models/reset-password';
-import VerfiyReq from '../../models/verfiy-email/index';
-import { ReactFacebookLoginInfo } from 'react-facebook-login';
+import { SITE_LANGUAGE } from "../../constants/keys";
+import { Login_Res, Register_Req, User } from "../../models";
+import Login_Req from "../../models/auth/login-req";
+import ApiService from "../../utils/api/api-service";
+import ApiResult from "../../utils/api/models/api-result";
+import Update_Req from "../../models/update-user-info/update-req";
+import ResetReq from "../../models/reset-password";
+import VerfiyReq from "../../models/verfiy-email/index";
+import { ReactFacebookLoginInfo } from "react-facebook-login";
 class AppServices extends ApiService {
   constructor() {
     super({ baseURL: `${process.env.NEXT_PUBLIC_PATH}api` });
@@ -18,7 +18,7 @@ class AppServices extends ApiService {
 
   public logout = async (): Promise<ApiResult<undefined>> => this.post<undefined>(`/logout`);
 
-  public getUser = async (): Promise<ApiResult<User>> => this.post<User>('/get-user');
+  public getUser = async (): Promise<ApiResult<User>> => this.post<User>("/get-user");
 
   public register = async (req: Register_Req): Promise<ApiResult<Login_Res>> => this.post<Login_Res>(`/proxy/api/register`, req);
 
@@ -35,7 +35,9 @@ class AppServices extends ApiService {
     this.post<Login_Res>(`/proxy/api/resend-otp`, req);
 
   public loginFB = async (req: ReactFacebookLoginInfo, provider: string): Promise<ApiResult<Login_Res>> =>
-    this.post<Login_Res>(`/proxy/api/social/login`, { 'access-token': req.accessToken, 'social-provider': provider });
+    this.post<Login_Res>(`/proxy/api/social/login`, { "access-token": req.accessToken, "social-provider": provider });
+
+  public deleteFI = async (): Promise<ApiResult<undefined>> => this.delete<undefined>(`/proxy/api/social/delete`);
 }
 
 export const appServices = new AppServices();

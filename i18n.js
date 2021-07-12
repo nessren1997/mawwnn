@@ -18,8 +18,9 @@ module.exports = {
     '/verfiy-email': ['verfiy-email'],
     '/terms-conditions': ['terms-conditions'],
     '/privacy-policy': ['privacy-policy'],
-    '/deleteIF': ['deleteIF'],
-    '/contact': ['login']
+    '/how-to-delete-your-facebook-data': ['deleteIF'],
+    '/contact': ['login'],
+    '/missing-params': ['messingparams']
   },
   interpolation: {
     prefix: '${',

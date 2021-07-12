@@ -26,6 +26,8 @@ const Sider: FC = () => {
       <Menu.SubMenu key="sub1" title={translate`Manage`} icon={<EditOutlined />}>
         {user?.permissions.map((el) => {
           const t = PermissionToMenuItem(el.name);
+          console.log("ppppp", t);
+
           if (t) {
             if (Array.isArray(t)) {
               return t.map((el) => {
@@ -56,10 +58,10 @@ const Sider: FC = () => {
                   return (
                     <Menu.SubMenu key={el.path} title={translate(`${el.title}`)}>
                       <Menu.Item key={`${el.path}`}>
-                        <Link href={`${el.path}`}>cities</Link>
+                        <Link href={`${el.path}`}>{translate(`All_Cities`)}</Link>
                       </Menu.Item>
-                      <Menu.Item key={`${el.path}/cities-allowed-to-shipped`} disabled>
-                        <Link href={`${el.path}/cities-allowed-to-shipped`}>cities allowed to shipped</Link>
+                      <Menu.Item key={`${el.path}/cities-allowed-to-shipped`}>
+                        <Link href={`${el.path}/cities-allowed-to-shipped`}>{translate(`cities_allowed`)}</Link>
                       </Menu.Item>
                     </Menu.SubMenu>
                   );
