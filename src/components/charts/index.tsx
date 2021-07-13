@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   Chart,
   ArcElement,
@@ -22,15 +22,15 @@ import {
   Filler,
   Legend,
   Tooltip,
-} from 'chart.js';
-import { Col, Row, Typography } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import useTranslation from 'next-translate/useTranslation';
-import { RootState } from '../../redux/store';
-import { FetchProductsStatisticsAsync, FetchBuyersStatisticsAsync } from '../../redux/statistics';
+} from "chart.js";
+import { Col, Row, Typography } from "antd";
+import { useDispatch, useSelector } from "react-redux";
+import useTranslation from "next-translate/useTranslation";
+import { RootState } from "../../redux/store";
+import { FetchProductsStatisticsAsync, FetchBuyersStatisticsAsync } from "../../redux/statistics";
 
-import months from './months.json';
-import './style.less';
+import months from "./months.json";
+import "./style.less";
 
 Chart.register(
   ArcElement,
@@ -68,17 +68,17 @@ interface chart_data {
 
 export const HomeChart = () => {
   const dispatch = useDispatch();
-  const { lang, t } = useTranslation('common');
+  const { lang, t } = useTranslation("common");
   const { products_data, buyers_data } = useSelector((state: RootState) => state.Statistics);
 
   const [products_statistics, setproducts_statistics] = useState<chart_data>({
     labels: [],
-    datasets: [{ label: '', data: [], backgroundColor: [], borderWidth: 0 }],
+    datasets: [{ label: "", data: [], backgroundColor: [], borderWidth: 0 }],
   });
 
   const [buyer_statistics, setbuyer_statistics] = useState<chart_data>({
     labels: [],
-    datasets: [{ label: '', data: [], backgroundColor: [], borderWidth: 0 }],
+    datasets: [{ label: "", data: [], backgroundColor: [], borderWidth: 0 }],
   });
 
   useEffect(() => {
@@ -88,10 +88,10 @@ export const HomeChart = () => {
 
   useEffect(() => {
     if (window) {
-      var ctx1 = document.getElementById('myChart1') as HTMLCanvasElement;
+      var ctx1 = document.getElementById("myChart1") as HTMLCanvasElement;
       myChart1 && myChart1.destroy();
       myChart1 = new Chart(ctx1, {
-        type: 'bar',
+        type: "bar",
         data: products_statistics,
         options: {
           scales: {
@@ -110,11 +110,11 @@ export const HomeChart = () => {
 
   useEffect(() => {
     if (window) {
-      var ctx2 = document.getElementById('myChart2') as HTMLCanvasElement;
+      var ctx2 = document.getElementById("myChart2") as HTMLCanvasElement;
       Chart.register(BarElement, LinearScale);
       myChart2 && myChart2.destroy();
       myChart2 = new Chart(ctx2, {
-        type: 'bar',
+        type: "bar",
         data: buyer_statistics,
         options: {
           scales: {
@@ -143,9 +143,9 @@ export const HomeChart = () => {
       labels: [...newlables],
       datasets: [
         {
-          label: '',
+          label: "",
           data: [...newdata],
-          backgroundColor: ['#c19a4b', '#ffdb96', '#275E9F', '#9BB0BF', '#DE9D7A', '#504735'],
+          backgroundColor: ["#c19a4b", "#ffdb96", "#275E9F", "#9BB0BF", "#DE9D7A", "#504735"],
           borderWidth: 1,
         },
       ],
@@ -164,9 +164,9 @@ export const HomeChart = () => {
       labels: [...newlables],
       datasets: [
         {
-          label: '',
+          label: "",
           data: [...newdata],
-          backgroundColor: ['#8D6E6A', '#BEBA93', '#58777C', '#9FC6F9', '#020B1E', '#175D91'],
+          backgroundColor: ["#8D6E6A", "#BEBA93", "#58777C", "#9FC6F9", "#020B1E", "#175D91"],
           borderWidth: 1,
         },
       ],
@@ -174,17 +174,17 @@ export const HomeChart = () => {
   }, [buyers_data, lang]);
 
   return (
-    <Row justify='space-around' style={{ padding: '20px 0px' }} gutter={[24, 24]}>
+    <Row justify="space-around" style={{ padding: "20px 0px" }} gutter={[24, 24]}>
       <Col lg={12} xs={24}>
-        <div className='container'>
+        <div className="container">
           <Title level={2}>{t`products_statistics`}</Title>
-          {products_data && <canvas id='myChart1'></canvas>}
+          {products_data && <canvas id="myChart1"></canvas>}
         </div>
       </Col>
       <Col lg={12} xs={24}>
-        <div className='container'>
+        <div className="container">
           <Title level={2}>{t`buyer_statistics`}</Title>
-          {buyers_data && myChart2 && <canvas id='myChart2'></canvas>}
+          {buyers_data && myChart2 && <canvas id="myChart2"></canvas>}
         </div>
       </Col>
     </Row>
