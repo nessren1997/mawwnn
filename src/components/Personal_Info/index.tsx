@@ -105,14 +105,14 @@ const PersonalInfo: React.FC = () => {
     setCancel(false);
   };
   const labelStyled = (text: string) => {
-    return <Text style={{ color: "#3f428f", fontWeight: "bold" }}>{text}</Text>;
+    return <Text style={{ color: "#8d2cd3", fontWeight: "bold" }}>{text}</Text>;
   };
   useEffect(() => {}, [user]);
   return (
     <>
       <Form labelAlign="right" layout="vertical" onFinish={onFinish} form={form}>
-        <Row justify="space-around" gutter={{ lg: 18, xl: 25 }} style={{ padding: "26px 35px 21px 59px" }}>
-          <Col>
+        <Row justify="start" gutter={{ lg: 18, xl: 25 }} style={{ padding: "26px 35px 21px 59px" }}>
+          <Col sm={12} xs={24}>
             <Form.Item name="first_name" label={labelStyled(t("firstName"))}>
               <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
             </Form.Item>
@@ -164,13 +164,9 @@ const PersonalInfo: React.FC = () => {
                   ]}
                 >
                   <Input style={{ height: "41px", borderRadius: "0 30px 30px 0" }} placeholder={t("phone")} disabled={disabled} />
-                </Form.Item>  
+                </Form.Item>
               </Col>
             </Row>
-
-            {/* <Form.Item name="phone" label={labelStyled(t("phone"))}>
-              <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
-            </Form.Item> */}
 
             <div className="city_select">
               <Form.Item name="city_id" label={labelStyled(t("city"))}>

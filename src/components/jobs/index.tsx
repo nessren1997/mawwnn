@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import useTranslation from 'next-translate/useTranslation';
 import { responsive_constant } from '../../constants/layout/responsive';
 import { FetchJobsAsync, selectJobs, selectJobsStatus } from '../../redux/job';
+import { primaryColor } from '../../constants/layout/color';
 
 import './style.less';
 
@@ -38,7 +39,7 @@ const Options: FC = () => {
           <Col lg={8} sm={12} xs={24} key={job.id}>
             <Link href={`/jobs/apply/${job.id}`}>
               <Button {...btn_layout} className='btn'>
-                <Image preview={false} src={job.image_path} />
+                <Image preview={false} src={job.image_path} style={{ color : primaryColor }} />
               </Button>
             </Link>
             <Title level={3}>{job.title}</Title>

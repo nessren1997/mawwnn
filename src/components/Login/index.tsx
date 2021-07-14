@@ -124,7 +124,7 @@ const Login: FC = () => {
               <Checkbox>
                 <span
                   style={{
-                    color: "#3f428f",
+                    color: "#8d2cd3",
                     fontWeight: "bold",
                     cursor: "pointer",
                   }}
@@ -136,7 +136,7 @@ const Login: FC = () => {
           </Form.Item>
           <Form.Item>
             <Link href="/reset-password">
-              <Button type="link" style={{ color: "#3f428f" }}>
+              <Button type="link" style={{ color: "#8d2cd3" }}>
                 <span style={{ textDecoration: "underline" }}>{t("forgot-your-password")}</span>
               </Button>
             </Link>

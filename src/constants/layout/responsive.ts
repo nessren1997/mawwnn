@@ -20,7 +20,7 @@ export const styledInput: {
 } = {
   style: {
     borderRadius: 30,
-    border: '1px solid #2b2e83',
+    border: '1px solid #8d2cd3',
     outline: 'none',
     height: '50px',
     padding: '10px 20px',

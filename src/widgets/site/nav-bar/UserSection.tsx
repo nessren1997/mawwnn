@@ -12,7 +12,7 @@ import { appServices } from '../../../services';
 import React, { useState } from 'react';
 import { cartSvg } from '../Footer/social-icons';
 
-const iconStyle: React.CSSProperties = { color: '#fff', fontSize: '1.2em' };
+const iconStyle: React.CSSProperties = { color: '#fff', fontSize: '1.2em' ,display:'flex', alignItems:'center'};
 
 const { confirm } = Modal;
 
@@ -80,7 +80,7 @@ const UserSection: React.FC = () => {
     <Space direction='horizontal' align='center' size='middle' className='userSectionSpace'>
       {user ? (
         <Dropdown overlay={menu} arrow={true} placement='bottomCenter' trigger={['hover']}>
-          <Button type='text' style={{ paddingTop: 5 }}>
+          <Button type='text'  style={{display:'flex', alignItems:'center'}}>
             <Space direction='horizontal' size='small'>
               <Text style={{ fontSize: '1.1em', color: '#fff' }}>{user.first_name}</Text>
             </Space>
@@ -93,6 +93,7 @@ const UserSection: React.FC = () => {
             size='small'
             icon={<UserOutlined style={{ ...iconStyle, paddingTop: '2px' }} />}
             className='badge userButtonIcon'
+            style={{display:'flex', alignItems:'center'}}
           />
         </Link>
       )}
@@ -102,9 +103,9 @@ const UserSection: React.FC = () => {
           <Button type='text' style={{ left: en ? -3 : 3 }}>
             <Space direction='horizontal' size='small'>
               {loading ? (
-                <LoadingOutlined spin={loading} style={iconStyle} />
+                <LoadingOutlined spin={loading} style={{...iconStyle ,marginTop:5}} />
               ) : (
-                <LanguageOutlined style={{ ...iconStyle, cursor: 'pointer' }} />
+                <LanguageOutlined style={{ ...iconStyle, cursor: 'pointer',marginTop:5 }} />
               )}
             </Space>
           </Button>
@@ -123,7 +124,7 @@ const UserSection: React.FC = () => {
           }}
         >
           <Link href='/cart'>
-            <Button type='text' size='small' style={{ top: -3 }} icon={<Icon component={cartSvg} style={iconStyle} />}></Button>
+            <Button type='text' size='small' style={{ top: -3 }} icon={<Icon component={cartSvg} style={{...iconStyle ,marginTop:10  }} />}></Button>
           </Link>
         </Badge>
       )}
