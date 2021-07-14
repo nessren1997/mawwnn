@@ -27,7 +27,7 @@ export interface Product {
   'overview:en'?: string;
   'specifications:ar'?: string;
   'specifications:en'?: string;
-  product_images: { id: number; image_path: string }[];
+  product_images: { id: number; image_path: string ;thumbnail_250?:string ;thumbnail_600?:string }[];
   product_tags: { id: number; name: string }[];
   price: number;
   is_visible?: 1 | 0;

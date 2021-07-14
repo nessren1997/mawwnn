@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { Col, Row, Image, Typography, Input, Button } from "antd";
-import {selectUser} from "../../redux/app"
+// import {selectUser} from "../../redux/app"
 import {
   FetchBrandsAsync,
   FetchProductsByNameAsync,
@@ -21,12 +21,12 @@ const { Title } = Typography;
 const id: FC = () => {
   const { t } = useTranslation("common");
   const { lang } = useTranslation();
-  const { query,replace } = useRouter();
+  const { query } = useRouter();
   const dispatch = useDispatch();
   const status = useSelector(selectBrandsStatus);
   const brands = useSelector(selectBrands);
   const [searched, setsearched] = useState<string>();
-  const user=useSelector(selectUser);
+  // const user=useSelector(selectUser);
   let products = useSelector(selectRequestedProducts);
   const products_status = useSelector(selectRequestedProductsStatus);
 
@@ -46,10 +46,10 @@ const id: FC = () => {
   const handleSearch = (e: any) => {
     setsearched(e.target.value);
   };
-  useEffect(()=>{
-    if(user?.missing_params)
-    replace("/personal-collection");
-  },[user])
+  // useEffect(()=>{
+  //   if(user?.missing_params)
+  //   replace("/personal-collection");
+  // },[user])
 
   let product_name = searched?.trim().toLowerCase();
   if (product_name && product_name.length > 0) {

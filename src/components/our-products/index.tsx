@@ -53,6 +53,7 @@ const OurProducts: FC = () => {
   //products
   const products_status = useSelector(selectProductsStatus);
   const products = useSelector(selectProducts);
+  console.log(products)
 
   useEffect(() => {
     activeTab && dispatch(FetchProductsByCategoryAsync(parseInt(activeTab)));

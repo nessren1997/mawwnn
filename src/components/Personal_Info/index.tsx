@@ -131,7 +131,15 @@ const PersonalInfo: React.FC = () => {
           </Col>
 
           <Col>
-            <Row style={{ direction: "ltr" }}>
+
+
+          <Form.Item name="last_name" label={labelStyled(t("lastName"))}>
+              <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
+            </Form.Item>
+            <Form.Item name="phone" label={labelStyled(t("phone"))}>
+              <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
+            </Form.Item>
+            {/* <Row style={{ direction: "ltr" }}>
               <Col span={8}>
                 <div className="select_code">
                   <Form.Item name="code">
@@ -154,19 +162,19 @@ const PersonalInfo: React.FC = () => {
                       pattern: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/,
                       message: t`form-validation.invalid-phone-number`,
                     },
-                    () => ({
-                      validator(_, value) {
-                        if (!value || isValidPhoneNumber(`+963${(value as string).replace(/\s/g, "")}`, "SY"))
-                          return Promise.resolve();
-                        return Promise.reject(new Error(t`form-validation.invalid-uae-number`));
-                      },
-                    }),
+                    // () => ({
+                    //   validator(_, value) {
+                    //     if (!value || isValidPhoneNumber(`+963${(value as string).replace(/\s/g, "")}`, "SY"))
+                    //       return Promise.resolve();
+                    //     return Promise.reject(new Error(t`form-validation.invalid-uae-number`));
+                    //   },
+                    // }),
                   ]}
                 >
                   <Input style={{ height: "41px", borderRadius: "0 30px 30px 0" }} placeholder={t("phone")} disabled={disabled} />
                 </Form.Item>
               </Col>
-            </Row>
+            </Row> */}
 
             <div className="city_select">
               <Form.Item name="city_id" label={labelStyled(t("city"))}>

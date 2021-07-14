@@ -59,12 +59,8 @@ const Login: FC = () => {
       } else if (user.missing_params === true && admin) {
         replace("/personal-collection");
       } else if (user.missing_params === true) {
-        console.log("mmm", user.missing_params);
-
         replace("/personal-collection");
       } else {
-        console.log("mmm", user.missing_params);
-
         replace("/");
       }
 

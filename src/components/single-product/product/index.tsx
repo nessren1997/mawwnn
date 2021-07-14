@@ -191,7 +191,7 @@ const ProductSection: FC<product_props> = ({ product }) => {
           width={'100%'}
           height={400}
           preview={false}
-          src={product.product_images[0]?.image_path}
+          src={product.product_images[0]?.thumbnail_600}
         />
         <Row gutter={[8, 8]} style={{ marginTop: '15px', maxWidth: '400px' }}>
           {product.product_images.map((image) => (
