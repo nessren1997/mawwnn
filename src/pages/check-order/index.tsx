@@ -11,9 +11,11 @@ import {
 } from '../../redux/order-status';
 import { useRouter } from 'next/router';
 import { OrderStatus_S_Req } from '../../models';
+import {selectUser} from "../../redux/app"
 
 const Index: React.FC = () => {
   const { t } = useTranslation('check-order');
+  const user=useSelector(selectUser);
   const { query } = useRouter();
   const { order: orderNumber } = query;
   const dispatch = useDispatch();
@@ -35,6 +37,10 @@ const Index: React.FC = () => {
     orderNumber && dispatch(ShowOrderStatusAsync({ id: orderNumber.toString() }));
   }, [orderNumber])
 
+  useEffect(()=>{
+    if(user?.missing_params)
+    replace("/personal-collection");
+  },[user])
   useEffect(() => {
     if (status === 'data') {
       replace('/order-collection');
