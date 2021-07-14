@@ -37,5 +37,10 @@
   "deleteIF": "حذف حساب الفيسبوك",
   "facebookaccount": "لم تقم بالتسجيل عبر حساب الفيسبوك ",
   "compleate-registration" : "لإتمام عملية التسجيل ",
-  "phone-city": "الرجاء إدخال رقم الهاتف واسم المدينة "
+  "phone-city": "الرجاء إدخال رقم الهاتف واسم المدينة ",
+  "form-validation": {
+    "invalid-phone-number": "رقم هاتف غير صالح!",
+    "invalid-uae-number": "هذا الرقم غير صالح",
+    "phone-help": " ex : +9639XXXXXXXX"
+  }
 }

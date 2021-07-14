@@ -89,7 +89,7 @@ const HelpfulLinks: FC = () => {
         <Col lg={6} md={8} sm={10} xs={24}>
           <Link href="/">
             <Button size="small" type="text" style={{ height: "fit-content", width: "fit-content" }}>
-              <Image width={"70%"} preview={false} src="/assets/dtic-footer-logo.png" />
+              <Image width={"60%"} preview={false} src="/assets/Logo.png" />
             </Button>
           </Link>
         </Col>

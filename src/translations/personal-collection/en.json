@@ -44,5 +44,10 @@
   "deleteIF": "Delete Facebook Account",
   "facebookaccount": "You Are Not Registered With A Facebook Account",
   "compleate-registration" : "To complete the registration process",
-  "phone-city": "please enter your phone number and city name"
+  "phone-city": "please enter your phone number and city name",
+  "form-validation": {
+    "invalid-phone-number": "Invalid Phone Number",
+    "invalid-uae-number": "Not Valid",
+    "phone-help": " ex : +9639XXXXXXXX"
+  }
 }

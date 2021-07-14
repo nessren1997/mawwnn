@@ -86,7 +86,7 @@ export const LargeNav: React.FC<propsInterface> = ({
           <Row justify="space-between" align="middle">
             <Col flex="1 1 150px">
               <Link href="/">
-                <img src="/assets/MWAN_logo.png" style={{ maxWidth: "130px", cursor: "pointer" }} />
+                <img src="/assets/Logo_white.png" style={{ maxWidth: "130px", cursor: "pointer" }} />
               </Link>
             </Col>
             <Col style={{ flex: "1 1 50%" }}>
@@ -193,10 +193,10 @@ export const LargeNav: React.FC<propsInterface> = ({
                     minWidth: "175px",
                     direction: "ltr",
                   }}
-                  href="mailto:Customercare@dtic.co"
+                  href="mailto:Customercare@mawn.co"
                 >
                   <Icon style={{ marginBottom: 2 }} component={emailSvg} />
-                  Customercare@dtic.co
+                  Customercare@mawn.co
                 </a>
               </span>
             </Col>
@@ -326,7 +326,7 @@ export const SmallNav: React.FC<propsInterface> = ({
         <Col>
           <Row align="middle">
             <Link href="/">
-              <img src="/assets/DTIC_logo.png" width={90} />
+              <img src="/assets/Logo_white.png" width={90} />
             </Link>
           </Row>
         </Col>

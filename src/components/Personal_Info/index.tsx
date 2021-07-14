@@ -1,6 +1,6 @@
 import { Typography, Col, Form, Input, Row, notification, Select, Alert } from "antd";
 import React, { useEffect, useState } from "react";
-import { styledInputNotBorderd } from "../../constants/layout/responsive";
+import { styledInput, styledInputNotBorderd } from "../../constants/layout/responsive";
 import PButton from "../PButton/Buttom";
 import useTranslation from "next-translate/useTranslation";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,8 +15,9 @@ import {
 import updateUserInfoReq from "../../models/update-user-info/update-req";
 import { PoweroffOutlined } from "@ant-design/icons";
 
-import "../Register/style.less";
+import "./style.less";
 import { FetchCitiesAsync } from "../../redux";
+import { isValidPhoneNumber } from "libphonenumber-js";
 
 const { Text } = Typography;
 const PersonalInfo: React.FC = () => {
@@ -84,6 +85,14 @@ const PersonalInfo: React.FC = () => {
         password: values.password,
         city_id: values.city_id,
       };
+      if (String(values.phone).charAt(0) === "0") {
+        values.phone = values.phone.substring(1);
+      }
+      values = {
+        ...values,
+        phone: `${values.code}${(values.phone as string).replace(/\s/g, "")}`,
+      };
+      delete values.code;
 
       dispatch(updateUserInfo(res));
       form.resetFields(["password", "confirm"]);
@@ -110,26 +119,7 @@ const PersonalInfo: React.FC = () => {
             <Form.Item name="email" label={labelStyled(t("email"))}>
               <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
             </Form.Item>
-            <Form.Item
-              name="password"
-              label={labelStyled(t("password"))}
-              rules={
-                [
-                  // {
-                  //   required: true,
-                  //   message: 'Please input your password!',
-                  // },
-                  // () => ({
-                  //   validator(rule, value) {
-                  //       if (value.length >= 8) {
-                  //         return Promise.resolve();
-                  //       }
-                  //       return Promise.reject(t('passwordLength'));
-                  //     }
-                  // }),
-                ]
-              }
-            >
+            <Form.Item name="password" label={labelStyled(t("password"))}>
               <Input.Password
                 disabled={disabled}
                 bordered={borderd}
@@ -139,13 +129,48 @@ const PersonalInfo: React.FC = () => {
               />
             </Form.Item>
           </Col>
+
           <Col>
-            <Form.Item name="last_name" label={labelStyled(t("lastName"))}>
+            <Row style={{ direction: "ltr" }}>
+              <Col span={8}>
+                <div className="select_code">
+                  <Form.Item name="code">
+                    <Select direction="ltr" style={{ top: 37 }} disabled={disabled}>
+                      <Option value="+963">
+                        <span dir="ltr">+963</span>
+                      </Option>
+                    </Select>
+                  </Form.Item>
+                </div>
+              </Col>
+              <Col span={16}>
+                <Form.Item
+                  name="phone"
+                  hasFeedback
+                  label={labelStyled(t("phone"))}
+                  rules={[
+                    { message: t("phoneN") },
+                    {
+                      pattern: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/,
+                      message: t`form-validation.invalid-phone-number`,
+                    },
+                    () => ({
+                      validator(_, value) {
+                        if (!value || isValidPhoneNumber(`+963${(value as string).replace(/\s/g, "")}`, "SY"))
+                          return Promise.resolve();
+                        return Promise.reject(new Error(t`form-validation.invalid-uae-number`));
+                      },
+                    }),
+                  ]}
+                >
+                  <Input style={{ height: "41px", borderRadius: "0 30px 30px 0" }} placeholder={t("phone")} disabled={disabled} />
+                </Form.Item>  
+              </Col>
+            </Row>
+
+            {/* <Form.Item name="phone" label={labelStyled(t("phone"))}>
               <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
-            </Form.Item>
-            <Form.Item name="phone" label={labelStyled(t("phone"))}>
-              <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
-            </Form.Item>
+            </Form.Item> */}
 
             <div className="city_select">
               <Form.Item name="city_id" label={labelStyled(t("city"))}>
