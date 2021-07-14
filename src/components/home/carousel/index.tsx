@@ -9,6 +9,7 @@ import {
 } from '../../../redux';
 import useTranslation from 'next-translate/useTranslation';
 import LoadingData from '../../LoadingData';
+import { primaryColor } from '../../../constants/layout/color';
 
 const HomeCarousel: FC = () => {
   const [ActiveImage, setActiveImage] = useState(0);
@@ -29,7 +30,7 @@ const HomeCarousel: FC = () => {
       <Carousel
         customPaging={(i) => (
           <div
-            style={{ background: ActiveImage === i ? '#ff0000' : '#f5f5f5' }}
+            style={{ background: ActiveImage === i ? primaryColor : '#f5f5f5' }}
             className='dot'
           />
         )}

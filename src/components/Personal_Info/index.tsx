@@ -81,14 +81,14 @@ const PersonalInfo: React.FC = () => {
     setCancel(false);
   };
   const labelStyled = (text: string) => {
-    return <Text style={{ color: '#3f428f', fontWeight: 'bold' }}>{text}</Text>;
+    return <Text style={{ color: '#8d2cd3', fontWeight: 'bold' }}>{text}</Text>;
   };
   return (
     <>
       <Form labelAlign='right' layout='vertical' onFinish={onFinish} form={form}>
-        <Row justify='space-around' gutter={{ lg: 18, xl: 25 }} style={{ padding: '26px 35px 21px 59px' }}>
-          <Col>
-            <Form.Item name='first_name' label={labelStyled(t('firstName'))}>
+        <Row justify='start' gutter={{ lg: 18, xl: 25 }} style={{ padding: '26px 35px 21px 59px' }}>
+          <Col sm={12} xs={24} >
+            <Form.Item name='first_name' label={labelStyled(t('firstName'))} >
               <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
             </Form.Item>
             <Form.Item name='email' label={labelStyled(t('email'))}>
@@ -123,7 +123,7 @@ const PersonalInfo: React.FC = () => {
               />
             </Form.Item>
           </Col>
-          <Col>
+          <Col sm={12} xs={24} >
             <Form.Item name='last_name' label={labelStyled(t('lastName'))}>
               <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
             </Form.Item>

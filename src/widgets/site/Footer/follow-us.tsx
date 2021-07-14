@@ -78,7 +78,7 @@ const FollowUs: FC = () => {
                   htmlType='submit'
                   type='primary'
                   size='large'
-                  danger
+                  style={{ backgroundColor: primaryColor }}
                 >
                   {t('confirm')}
                 </Button>

@@ -110,7 +110,7 @@ const Login: FC = () => {
               <Checkbox>
                 <span
                   style={{
-                    color: '#3f428f',
+                    color: '#8d2cd3',
                     fontWeight: 'bold',
                     cursor: 'pointer',
                   }}
@@ -122,7 +122,7 @@ const Login: FC = () => {
           </Form.Item>
           <Form.Item>
             <Link href='/reset-password'>
-              <Button type='link' style={{ color: '#3f428f' }}>
+              <Button type='link' style={{ color: '#8d2cd3' }}>
                 <span style={{ textDecoration: 'underline' }}>{t('forgot-your-password')}</span>
               </Button>
             </Link>
@@ -155,7 +155,7 @@ const Login: FC = () => {
               fields='name,email,picture.width(640)'
               callback={responseFacebook}
               scope='public_profile'
-              buttonStyle={{ width: '100%' }}
+              buttonStyle={{ width: '100%'  }}
               autoLoad={false}
               size='small'
               icon={<FBSvg style={{ margin: '0 10px 0 0' }} />}
