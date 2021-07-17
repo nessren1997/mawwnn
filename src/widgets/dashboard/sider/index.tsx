@@ -26,8 +26,6 @@ const Sider: FC = () => {
       <Menu.SubMenu key="sub1" title={translate`Manage`} icon={<EditOutlined />}>
         {user?.permissions.map((el) => {
           const t = PermissionToMenuItem(el.name);
-          console.log("ppppp", t);
-
           if (t) {
             if (Array.isArray(t)) {
               return t.map((el) => {

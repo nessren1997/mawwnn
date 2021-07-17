@@ -1,6 +1,6 @@
 //---------------CityAllowed-Req.ts---------------
 export interface CityAllowed_Req {
-  is_allowed_for_order: 0 | 1;
+  is_allowed_for_order: 1 | 0;
   id: number;
 }
 
@@ -10,7 +10,7 @@ export interface CityAllowed {
   name?: string;
   "name:ar"?: string;
   "name:en"?: string;
-  is_allowed_for_order: 0 | 1;
+  is_allowed_for_order?: 0 | 1;
 }
 
 //---------------CityAllowed-I-Req.ts---------------

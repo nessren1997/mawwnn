@@ -131,7 +131,14 @@ const PersonalInfo: React.FC = () => {
           </Col>
 
           <Col>
-            <Row style={{ direction: "ltr" }}>
+            <Form.Item name="last_name" label={labelStyled(t("lastName"))}>
+              <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
+            </Form.Item>
+            <Form.Item name="phone" label={labelStyled(t("phone"))}>
+              <Input disabled={disabled} bordered={borderd} {...styledInputNotBorderd} />
+            </Form.Item>
+
+            {/* <Row style={{ direction: "ltr" }}>
               <Col span={8}>
                 <div className="select_code">
                   <Form.Item name="code">
@@ -166,7 +173,7 @@ const PersonalInfo: React.FC = () => {
                   <Input style={{ height: "41px", borderRadius: "0 30px 30px 0" }} placeholder={t("phone")} disabled={disabled} />
                 </Form.Item>
               </Col>
-            </Row>
+            </Row> */}
 
             <div className="city_select">
               <Form.Item name="city_id" label={labelStyled(t("city"))}>

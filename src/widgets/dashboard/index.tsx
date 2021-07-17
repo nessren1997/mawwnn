@@ -35,10 +35,10 @@ const DahsboardLayout: React.FC = ({ children }) => {
         collapsible
       >
         <div style={{ padding: 5 }}>
-          <Image src="/assets/MAWN_logo.png" layout="responsive" width={289} height={159} />
+          <Image src="/assets/Logo.png" layout="responsive" width={289} height={159} />
         </div>
         <MAWNSider />
-        <div style={{ padding: collapsed ? 10 : 5, position: "fixed", bottom: collapsed ? 25 : 50 }}>
+        {/* <div style={{ padding: collapsed ? 10 : 5, position: "fixed", bottom: collapsed ? 25 : 50 }}>
           <Link href="https://its.sy">
             <a target="__black">
               {collapsed ? (
@@ -48,7 +48,7 @@ const DahsboardLayout: React.FC = ({ children }) => {
               )}
             </a>
           </Link>
-        </div>
+        </div> */}
       </Sider>
 
       <Content style={lang === "en" ? { marginLeft: marginContent } : { marginRight: marginContent }}>

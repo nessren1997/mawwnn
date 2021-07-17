@@ -43,6 +43,8 @@ export const UpdateCityAllowedAsync =
   async (dispatch) => {
     dispatch(setStatus("loading"));
     const result = await cityAllowedService.Update(req);
+    console.log("res", result);
+
     if (isError(result)) {
       ApiErrorNotification(result);
       dispatch(setStatus("error"));

@@ -1,10 +1,10 @@
 #APP
 
 NEXT_PUBLIC_PATH=/
-API_URL=https://dtic.app/backend/public/
+API_URL=https://demo.mawenapp.com/laravel_backend/public
 HOST=http://localhost:3000
 
 #CO
 NEXT_PUBLIC_PATH=/
-API_URL=https://dtic.co/bigbang/public/
+API_URL=https://demo.mawenapp.com/laravel_backend/public
 HOST=http://localhost:3000

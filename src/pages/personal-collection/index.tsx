@@ -41,7 +41,7 @@ const PersonCollection: React.FC = () => {
                 </Row>
               </TabPane>
 
-              <TabPane tab={t("deleteIF")} key="3" id="tab2">
+              {/* <TabPane tab={t("deleteIF")} key="3" id="tab2">
                 <Row>
                   <Col
                     xxl={24}
@@ -61,7 +61,7 @@ const PersonCollection: React.FC = () => {
                     <DeleteIF />
                   </Col>
                 </Row>
-              </TabPane>
+              </TabPane> */}
 
               <TabPane tab={t("myaccount")} key="1">
                 <Row>

@@ -22,7 +22,7 @@ module.exports = nextTranslate(
         localIdentName: '[local]___[hash:base64:5]',
       },
       images: {
-        domains: ['dtic.co'],
+        domains: ['demo.mawenapp.com'],
       },
       ...withLess(
         withSass({

@@ -179,7 +179,7 @@ export const LargeNav: React.FC<propsInterface> = ({
                   href="https://wa.me/00963991999690"
                 >
                   <Icon style={{ marginBottom: 2 }} component={whatsappSvg} />
-                  +963991999690
+                  +9668003040500
                 </a>
               </span>
               <span style={{ margin: 8 }} className={styles.divider}></span>

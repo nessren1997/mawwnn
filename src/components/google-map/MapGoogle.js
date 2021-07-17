@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import GMap from './GMao';
 
 // API key of the google map
-const GOOGLE_MAP_API_KEY = 'AIzaSyCWg5dkUiLHWFP96XIEz9kdgsNiBPDQ-kU';
+const GOOGLE_MAP_API_KEY = 'AIzaSyASxGPnJI4Ydycha5DwFkqkIccF7tzTjSA';
 
 // load google map script
 const loadGoogleMapScript = (callback) => {
