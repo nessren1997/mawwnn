@@ -91,10 +91,10 @@ const FollowUs: FC = () => {
       <Col lg={4} md={10} sm={20} xs={24}>
         <Title level={4}>{t("follow_us")}</Title>
         <Space direction="horizontal" size="large">
-          <Link href="https://www.facebook.com" target="_blank">
+          <Link href="https://www.facebook.com/mawn.co/" target="_blank">
             <Button {...btnProps} icon={<FBSvg />} />
           </Link>
-          <Link href="https://www.instagram.com" target="_blank">
+          <Link href="https://www.instagram.com/mawn.me/" target="_blank">
             <Button {...btnProps} icon={<InstagramOutlined />} />
           </Link>
           <Link href="https://twitter.com/home/" target="_blank">

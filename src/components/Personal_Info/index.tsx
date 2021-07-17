@@ -143,8 +143,8 @@ const PersonalInfo: React.FC = () => {
                 <div className="select_code">
                   <Form.Item name="code">
                     <Select direction="ltr" style={{ top: 37 }} disabled={disabled}>
-                      <Option value="+963">
-                        <span dir="ltr">+963</span>
+                      <Option value="966+">
+                        <span dir="ltr">966+</span>
                       </Option>
                     </Select>
                   </Form.Item>

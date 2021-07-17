@@ -59,11 +59,12 @@ export default function index() {
         <meta
           name="description"
           lang="en"
-          content={`MAWN was established in 2013 as a specialized company in  manufacturing and trading all kinds of detergents: (liquids, gels, powders, and disinfectants). DTI'C certificated ISO 9001: 2015 in the scope of detergents manufacturing. MAWNs headquarters of the company is located in Syria and has several distribution centers in several countries around the world.`}
+          content={`MAWN was established in 2013 as a specialized company in  manufacturing and trading all kinds of detergents: (liquids, gels, powders, and disinfectants).MAWN certificated ISO 9001: 2015 in the scope of detergents manufacturing. MAWNs headquarters of the company is located in Syria and has several distribution centers in several countries around the world.`}
         />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://demo.mawenapp.com/" />
+
         <meta property="og:title" content="MAWN" />
         <meta
           property="og:description"
@@ -72,12 +73,13 @@ export default function index() {
         <meta
           property="og:description"
           lang="en"
-          content={`MAWN was established in 2013 as a specialized company in  manufacturing and trading all kinds of detergents: (liquids, gels, powders, and disinfectants). DTI'C certificated ISO 9001: 2015 in the scope of detergents manufacturing. MAWNs headquarters of the company is located in Syria and has several distribution centers in several countries around the world.`}
+          content={`MAWN was established in 2013 as a specialized company in  manufacturing and trading all kinds of detergents: (liquids, gels, powders, and disinfectants). MAWN certificated ISO 9001: 2015 in the scope of detergents manufacturing. MAWNs headquarters of the company is located in Syria and has several distribution centers in several countries around the world.`}
         />
         <meta property="og:image" content="https://demo.mawenapp.com/assets/MAWN_logo.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://demo.mawenapp.com/" />
+
         <meta property="twitter:title" content="MAWN" />
         <meta
           property="twitter:description"

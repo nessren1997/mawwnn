@@ -92,7 +92,7 @@ const index: FC = () => {
                 <Space direction='horizontal' size='small'>
                   <Text>{t('total')}:</Text>
                   <span style={{ color: '#008000a6' }}>{order?.total}</span>
-                  SYP
+                  SAR
                 </Space>
               </Col>
             </Row>

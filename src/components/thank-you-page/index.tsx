@@ -123,7 +123,7 @@ const index: React.FC = () => {
                   padding: '10px 0',
                 }}
               >
-                <span>SYP</span>
+                <span>SAR</span>
                 <span style={{ color: successColor, margin: '0 7px' }}>{thousands_separators(fullPrice)}</span>
               </span>
             </Col>

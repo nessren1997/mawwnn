@@ -32,20 +32,21 @@ const id: FC<Props> = ({ product }) => {
     <>
       <Head>
         <title>MAWN</title>
-        <meta name="title" content={`MAWN | ${product.name}`} />
-        <meta name="description" content={product?.overview} />
 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://mawn.co/products/${id}`} />
-        <meta property="og:title" content={`MAWN | ${product.name}`} />
-        <meta property="og:description" content={product?.overview} />
-        <meta property="og:image" content={product?.product_images[0].image_path} />
+        <meta name='title' content={`MAWN | ${product.name}`} />
+        <meta name='description' content={product?.overview} />
 
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`https://mawn.co/products/${id}`} />
-        <meta property="twitter:title" content={`MAWN | ${product.name}`} />
-        <meta property="twitter:description" content={product?.overview} />
-        <meta property="twitter:image" content={product?.product_images[0].image_path} />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content={`https://mawn.co/products/${id}`} />
+        <meta property='og:title' content={`MAWN | ${product.name}`} />
+        <meta property='og:description' content={product?.overview} />
+        <meta property='og:image' content={product?.product_images[0].image_path} />
+
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content={`https://mawn.co/products/${id}`} />
+        <meta property='twitter:title' content={`MAWN | ${product.name}`} />
+        <meta property='twitter:description' content={product?.overview} />
+        <meta property='twitter:image' content={product?.product_images[0].image_path} />
       </Head>
       <Row justify="center" gutter={[0, 64]}>
         <Col {...responsive_constant}>
@@ -85,6 +86,8 @@ export const getStaticProps: GetStaticProps<Props, { id: string }> = async ({ lo
 export const getStaticPaths: GetStaticPaths = async () => {
   const service = new ProductService();
   const result = await service.FetchSite();
+  console.log("skkkkkkkkkkkjsjnsjnxkskakmklsnknsalkksanksnaknkan");
+  console.log(result);
   if (isError(result)) {
     throw new Error();
   }
@@ -92,6 +95,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const pathsAr = result.data.map((el) => ({
     params: { id: el.id.toString() },
     locale: "ar",
+
   }));
   const pathsEn = result.data.map((el) => ({
     params: { id: el.id.toString() },
