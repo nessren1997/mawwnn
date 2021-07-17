@@ -38,12 +38,12 @@ const index: React.FC<propsInterface> = ({ nextStep, total, procced }) => {
     <form style={{ width: '100%', margin: '0 auto' }}>
       <Entry
         name={t`details-form.total`}
-        value={`${thousands_separators(total)} SYP`}
+        value={`${thousands_separators(total)} SAR`}
       />
       <Entry name={t`details-form.delivery`} value={t`details-form.free`} />
       <Entry
         name={t`details-form.total`}
-        value={`${thousands_separators(total)} SYP`}
+        value={`${thousands_separators(total)} SAR`}
         total={true}
       />
       <Button

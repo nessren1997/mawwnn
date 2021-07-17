@@ -49,16 +49,16 @@ const HelpfulLinks: FC = () => {
             <Title level={3} style={{ color: primaryColor }}>
               {t("social_media")}
             </Title>
-            <Link href="https://www.facebook.com/dtic.co/" target="_blank" {...linkLayout}>
+            <Link href="https://www.facebook.com/mawn.co/" target="_blank" {...linkLayout}>
               {t("facebook")}
             </Link>
-            <Link href="https://www.instagram.com/dtic.me/" target="_blank" {...linkLayout}>
+            <Link href="https://www.instagram.com/mawn.me/" target="_blank" {...linkLayout}>
               {t("instagram")}
             </Link>
             <Link href="https://twitter.com" target="_blank" {...linkLayout}>
               {t("twitter")}
             </Link>
-            <Link href="https://www.linkedin.com/company/dtic/" target="_blank" {...linkLayout}>
+            <Link href="https://www.linkedin.com/company/mawn/" target="_blank" {...linkLayout}>
               {t("linked_in")}
             </Link>
           </Space>

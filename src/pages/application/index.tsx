@@ -19,12 +19,12 @@ const index: React.FC = () => {
               <Col span={24} style={{ textAlign: "center" }}>
                 <Row justify="center" gutter={[32, 32]}>
                   <Col>
-                    <a href="https://apps.apple.com/fr/app/dtic/id1553037485#?platform=iphone" target="__blank">
+                    <a href="https://apps.apple.com/fr/app/mawn/id1553037485#?platform=iphone" target="__blank">
                       <img src="/assets/app-store.png" width={200} />
                     </a>
                   </Col>
                   <Col>
-                    <a href="https://play.google.com/store/apps/details?id=com.bigbang.flutter_dtic" target="__blank">
+                    <a href="https://play.google.com/store/apps/details?id=com.bigbang.flutter_mawn" target="__blank">
                       <img src="/assets/google-play.png" width={200} />
                     </a>
                   </Col>

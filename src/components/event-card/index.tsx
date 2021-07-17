@@ -24,7 +24,7 @@ const EventCard: FC<Props> = ({ data }) => {
           className='event-card-image'
           height={'280px'}
           preview={false}
-          src={data.event_images[0].path}
+          src={data.event_images[0]?.path}
           style={{ objectFit: 'cover' }}
         />
         <Paragraph

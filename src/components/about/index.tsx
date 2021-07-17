@@ -23,7 +23,7 @@ const AboutUs: FC = () => {
     <LoadingData dataValid={() => (about ? true : false)} loading={status === 'loading'}>
       <div className='about-back' />
       <div className='about-card'>
-        <Image preview={false} className='about-img' width='100%' src='/assets/new/about-us.png' />
+        <Image preview={false} className='about-img' width='100%' src='/assets/new/about-us.jpg' />
         <div className='about-content'>
           <Title level={2} style={{ fontWeight: 'normal', color: primaryColor }}>
             {t('introduction')}
@@ -37,7 +37,7 @@ const AboutUs: FC = () => {
           >
             <Col span={23}>
               <Space direction='vertical' size={40}>
-                <p style={{ color: 'GrayText' }} dangerouslySetInnerHTML={{ __html: about?.content! }} />
+              <p style={{ color: 'GrayText' }} dangerouslySetInnerHTML={{ __html: about?.content! }} />
               </Space>
             </Col>
           </Row>
