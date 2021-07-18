@@ -32,7 +32,7 @@ const DetailsList: React.FC<PropsInterface> = ({
       <List.Item className='list_item' style={listStyle}>
         <Text>{t`step-one-header.total`}</Text>{' '}
         <Text className='gray' style={{ color: '#545454' }}>
-          {thousands_separators(originalPrice)} SYP
+          {thousands_separators(originalPrice)} SAR
         </Text>
       </List.Item>
       <List.Item className='list_item' style={listStyle}>
@@ -50,7 +50,7 @@ const DetailsList: React.FC<PropsInterface> = ({
       <List.Item className='list_item' style={listStyle}>
         <Text>{t`step-one-header.total`}</Text>{' '}
         <Text style={{ color: 'red', fontWeight: 'bold' }}>
-          {thousands_separators(price)} SYP
+          {thousands_separators(price)} SAR
         </Text>
       </List.Item>
     </List>

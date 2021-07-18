@@ -217,10 +217,14 @@ const ManageGifts: FC = () => {
           <Row justify="space-around" align="middle">
             <Col>
               {/* <div id='divv' dangerouslySetInnerHTML={{ __html: preview.previewImage as any }} /> */}
-              <img src={`data:image/png;base64, ${preview.previewImage}`} />
+              <img src={`data:image/svg+xml;base64, ${preview.previewImage}`} />
             </Col>
             <Col>
-              <Button size="large" type="primary" onClick={() => downloadImage(`data:image/png;base64, ${preview.previewImage}`)}>
+              <Button
+                size="large"
+                type="primary"
+                onClick={() => downloadImage(`data:image/svg+xml;base64, ${preview.previewImage}`)}
+              >
                 {"Download"}
               </Button>
             </Col>

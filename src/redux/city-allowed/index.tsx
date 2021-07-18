@@ -27,8 +27,11 @@ const CitiesAllowedSlice = createSlice({
       state.status = payload;
     },
     UpdateCityAllowed: (state, { payload }: PayloadAction<CityAllowed>) => {
+      console.log('bbbmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm');
       let ind = state.citiesallowed.findIndex((el) => el.id === payload.id);
       if (ind !== -1) state.citiesallowed[ind] = payload;
+      console.log('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
+      console.log(state);
     },
     FetchCitiesAllowed: (state, { payload }: PayloadAction<CityAllowed[]>) => {
       state.citiesallowed = payload;
@@ -43,6 +46,8 @@ export const UpdateCityAllowedAsync =
   async (dispatch) => {
     dispatch(setStatus("loading"));
     const result = await cityAllowedService.Update(req);
+    console.log("res", result);
+
     if (isError(result)) {
       ApiErrorNotification(result);
       dispatch(setStatus("error"));

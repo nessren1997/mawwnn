@@ -38,6 +38,13 @@ export interface Product {
   similar_products: Product[];
 }
 
+export interface Links {
+  first: string;
+  last: string;
+  prev: string;
+  next: string;
+}
+
 //---------------Product-I-Req.ts---------------
 
 export interface Product_I_Req {

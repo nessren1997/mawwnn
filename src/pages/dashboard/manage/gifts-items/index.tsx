@@ -1,8 +1,8 @@
-import React, { FC, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import useTranslation from 'next-translate/useTranslation';
-import { ItemType } from '../../../../utils/CRUDBuilder/types';
-import CRUDBuilder from '../../../../utils/CRUDBuilder/CRUDBuilder';
+import React, { FC, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import useTranslation from "next-translate/useTranslation";
+import { ItemType } from "../../../../utils/CRUDBuilder/types";
+import CRUDBuilder from "../../../../utils/CRUDBuilder/CRUDBuilder";
 
 import {
   DeleteGiftItemAsync,
@@ -10,20 +10,20 @@ import {
   InsertGiftItemAsync,
   selectGiftItem,
   UpdateGiftItemAsync,
-} from '../../../../redux/gift-item';
-import { Modal, Typography } from 'antd';
-import { GetServerSideProps } from 'next';
-import { selectApp } from '../../../../redux';
-import { DashboardAuthenticated } from '../../../../utils/helpers/dashboard-authenticated';
+} from "../../../../redux/gift-item";
+import { Modal, Typography } from "antd";
+import { GetServerSideProps } from "next";
+import { selectApp } from "../../../../redux";
+import { DashboardAuthenticated } from "../../../../utils/helpers/dashboard-authenticated";
 
 const { confirm } = Modal;
 
 const ManageGiftItems: FC = () => {
   const dispatch = useDispatch();
   const { user } = useSelector(selectApp);
-  const { lang, t } = useTranslation('dashboard');
-  const sales = user?.roles[0].name === 'sales';
-  const customer_care = user?.roles[0].name === 'customer care';
+  const { lang, t } = useTranslation("dashboard");
+  const sales = user?.roles[0].name === "sales";
+  const customer_care = user?.roles[0].name === "customer care";
 
   const { giftItems, status, error_message } = useSelector(selectGiftItem);
 
@@ -51,45 +51,45 @@ const ManageGiftItems: FC = () => {
     {
       columnType: {
         title: t`id`,
-        dataIndex: 'id',
-        fixed: 'left',
+        dataIndex: "id",
+        fixed: "left",
         width: 100,
       },
-      type: 'primary-key',
+      type: "primary-key",
     },
     {
       columnType: {
         title: t`name`,
-        dataIndex: 'name',
-        width: 'auto',
+        dataIndex: "name",
+        width: "auto",
       },
-      type: 'text',
+      type: "text",
       trans: true,
     },
     {
       columnType: {
         title: t`description`,
-        dataIndex: 'description',
-        width: 'auto',
+        dataIndex: "description",
+        width: "auto",
       },
-      type: 'text',
+      type: "text",
       trans: true,
     },
     {
       columnType: {
         title: t`image`,
-        dataIndex: 'image',
+        dataIndex: "image",
         width: 200,
       },
-      type: 'image',
+      type: "image",
     },
   ];
 
   return (
     <CRUDBuilder
-      lang={lang === 'en' ? 'en' : 'ar'}
+      lang={lang === "en" ? "en" : "ar"}
       items={giftItems}
-      loading={status === 'loading'}
+      loading={status === "loading"}
       itemsHeader={[...columnsGiftItems]}
       AddAsync={sales ? undefined : (el) => InsertGiftItemAsync({ giftItem: el.item })}
       UpdateAsync={

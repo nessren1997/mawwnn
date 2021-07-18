@@ -21,6 +21,7 @@ import { DeleteFilled, PlusOutlined } from "@ant-design/icons";
 import { DashboardAuthenticated } from "../../../../utils/helpers/dashboard-authenticated";
 import { CustomUpload } from "../../../../utils/CRUDBuilder/CustomComponent/CustomUpload";
 import { City } from "../../../../models";
+import FileToBase64 from "../../../../utils/helpers/file-to-base64";
 interface Setting {
   id: number | null;
   "key:ar": string;

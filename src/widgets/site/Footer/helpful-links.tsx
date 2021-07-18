@@ -39,9 +39,9 @@ const HelpfulLinks: FC = () => {
               <Link {...linkLayout}>{t("privacy-policy")}</Link>
             </NextLink>
 
-            <NextLink href={"/how-to-delete-your-facebook-data"}>
+            {/* <NextLink href={"/how-to-delete-your-facebook-data"}>
               <Link {...linkLayout}>{t("delete-information-facebook")}</Link>
-            </NextLink>
+            </NextLink> */}
           </Space>
         </Col>
         <Col xs={24} sm={18} md={8} lg={6}>
@@ -49,16 +49,16 @@ const HelpfulLinks: FC = () => {
             <Title level={3} style={{ color: primaryColor }}>
               {t("social_media")}
             </Title>
-            <Link href="https://www.facebook.com/dtic.co/" target="_blank" {...linkLayout}>
+            <Link href="https://www.facebook.com/" target="_blank" {...linkLayout}>
               {t("facebook")}
             </Link>
-            <Link href="https://www.instagram.com/dtic.me/" target="_blank" {...linkLayout}>
+            <Link href="https://www.instagram.com/" target="_blank" {...linkLayout}>
               {t("instagram")}
             </Link>
             <Link href="https://twitter.com" target="_blank" {...linkLayout}>
               {t("twitter")}
             </Link>
-            <Link href="https://www.linkedin.com/company/dtic/" target="_blank" {...linkLayout}>
+            <Link href="https://www.linkedin.com/" target="_blank" {...linkLayout}>
               {t("linked_in")}
             </Link>
           </Space>

@@ -50,7 +50,7 @@ const Entry: React.FC<propsInterface> = ({ src, details, price, quantity }) => {
         <Text
           style={{ margin: '5px 0 0 0', color: '#2B2E82', fontWeight: 'bold' }}
         >
-          {thousands_separators(price)} SYP
+          {thousands_separators(price)} SAR
         </Text>
       </Col>
     </Row>

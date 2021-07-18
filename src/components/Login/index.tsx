@@ -78,17 +78,17 @@ const Login: FC = () => {
     dispatch(loginAsync(value));
   };
 
-  const responseFacebook = (req: ReactFacebookLoginInfo) => {
-    if (!isMount) {
-      dispatch(LoginFBAsync(req, "facebook"));
-    }
-  };
+  // const responseFacebook = (req: ReactFacebookLoginInfo) => {
+  //   if (!isMount) {
+  //     dispatch(LoginFBAsync(req, "facebook"));
+  //   }
+  // };
 
-  const responseGoogle = (req: any) => {
-    if (!isMount) {
-      dispatch(LoginFBAsync(req, "google"));
-    }
-  };
+  // const responseGoogle = (req: any) => {
+  //   if (!isMount) {
+  //     dispatch(LoginFBAsync(req, "google"));
+  //   }
+  // };
 
   return (
     <>
@@ -153,7 +153,7 @@ const Login: FC = () => {
         </Row>
       </Form>
 
-      <Divider />
+      {/* <Divider />
 
       <Row justify="center" style={{ marginTop: 30 }}>
         <Col span={22}>
@@ -192,7 +192,7 @@ const Login: FC = () => {
             />
           </Space>
         </Col>
-      </Row>
+      </Row> */}
     </>
   );
 };

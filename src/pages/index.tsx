@@ -17,6 +17,7 @@ import { CloseCircleOutlined, LoadingOutlined } from "@ant-design/icons";
 import Head from "next/head";
 // import {selectUser} from "../redux/app"
 // import {useRouter} from "next/router"
+
 import { Product } from "../models";
 
 const antIcon = <LoadingOutlined style={{ fontSize: 84 }} spin />;
@@ -27,12 +28,14 @@ export default function index() {
 
   // const {replace}=useRouter();
 
+
   const results_section = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
   const requested_products = useSelector(selectRequestedProducts);
   const requested_products_status = useSelector(selectRequestedProductsStatus);
 
   // const user=useSelector(selectUser);
+
   useEffect(() => {
     if (requested_products_status === "data") {
       if (window) {
@@ -51,6 +54,7 @@ export default function index() {
   //   replace("/personal-collection");
 
   // },[user])
+
   return (
     <>
       <Head>
@@ -63,11 +67,12 @@ export default function index() {
         <meta
           name="description"
           lang="en"
-          content={`MAWN was established in 2013 as a specialized company in  manufacturing and trading all kinds of detergents: (liquids, gels, powders, and disinfectants). DTI'C certificated ISO 9001: 2015 in the scope of detergents manufacturing. MAWNs headquarters of the company is located in Syria and has several distribution centers in several countries around the world.`}
+          content={`MAWN was established in 2013 as a specialized company in  manufacturing and trading all kinds of detergents: (liquids, gels, powders, and disinfectants).MAWN certificated ISO 9001: 2015 in the scope of detergents manufacturing. MAWNs headquarters of the company is located in Syria and has several distribution centers in several countries around the world.`}
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dtic.co/" />
+        <meta property="og:url" content="https://demo.mawenapp.com/" />
+
         <meta property="og:title" content="MAWN" />
         <meta
           property="og:description"
@@ -76,12 +81,13 @@ export default function index() {
         <meta
           property="og:description"
           lang="en"
-          content={`MAWN was established in 2013 as a specialized company in  manufacturing and trading all kinds of detergents: (liquids, gels, powders, and disinfectants). DTI'C certificated ISO 9001: 2015 in the scope of detergents manufacturing. MAWNs headquarters of the company is located in Syria and has several distribution centers in several countries around the world.`}
+          content={`MAWN was established in 2013 as a specialized company in  manufacturing and trading all kinds of detergents: (liquids, gels, powders, and disinfectants). MAWN certificated ISO 9001: 2015 in the scope of detergents manufacturing. MAWNs headquarters of the company is located in Syria and has several distribution centers in several countries around the world.`}
         />
-        <meta property="og:image" content="https://dtic.co/assets/MAWN_logo.png" />
+        <meta property="og:image" content="https://demo.mawenapp.com/assets/MAWN_logo.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://dtic.co/" />
+        <meta property="twitter:url" content="https://demo.mawenapp.com/" />
+
         <meta property="twitter:title" content="MAWN" />
         <meta
           property="twitter:description"
@@ -92,7 +98,7 @@ export default function index() {
           lang="en"
           content={`MAWN was established in 2013 as a specialized company in  manufacturing and trading all kinds of detergents: (liquids, gels, powders, and disinfectants). DTI'C certificated ISO 9001: 2015 in the scope of detergents manufacturing. MAWNs headquarters of the company is located in Syria and has several distribution centers in several countries around the world.`}
         />
-        <meta property="twitter:image" content="https://dtic.co/assets/MAWN_logo.png" />
+        <meta property="twitter:image" content="https://demo.mawenapp.com/assets/MAWN_logo.png" />
       </Head>
       <Row justify="center" gutter={[0, 64]}>
         <Col span={24}>

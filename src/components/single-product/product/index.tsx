@@ -153,7 +153,7 @@ const ProductSection: FC<product_props> = ({ product }) => {
                     color: primaryColor,
                   }}
                 >
-                  SYR
+                  SA
                 </Text>
               </Row>
             </Col>

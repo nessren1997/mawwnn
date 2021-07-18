@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import NetworkErrorMAWN from "./network-error-dtic";
+import NetworkErrorMAWN from "./network-error-mawn";
 import Spin from "./Spin";
 
 interface LoadingDataProps {

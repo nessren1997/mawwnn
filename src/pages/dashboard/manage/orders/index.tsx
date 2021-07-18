@@ -255,7 +255,7 @@ const ManageOrders: FC = () => {
             <Col offset={18}>
               <Typography.Title level={5} style={{ marginTop: 30 }}>
                 <span style={{ fontWeight: "normal" }}>Total price </span>
-                {total} <span style={{ fontWeight: "normal" }}>S.P</span>
+                {total} <span style={{ fontWeight: "normal" }}>SAR</span>
               </Typography.Title>
             </Col>
           </Row>

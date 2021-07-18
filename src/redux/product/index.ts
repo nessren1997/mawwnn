@@ -144,6 +144,8 @@ export const FetchDashProductsAsync = (): AppThunk => async (dispatch) => {
 export const FetchSiteProductsAsync = (): AppThunk => async (dispatch) => {
   dispatch(setStatus('loading'));
   const result = await productService.FetchSite();
+  console.log("res", result);
+  
   if (isError(result)) {
     ApiErrorNotification(result);
     dispatch(setStatus('error'));

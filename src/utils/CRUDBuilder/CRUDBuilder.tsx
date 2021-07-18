@@ -184,7 +184,7 @@ const CRUDBuilder: React.FC<CRADBuilderProps> = ({
               res[to_dataIndex] = item[from_dataIndex].id;
             } else if (el.type === "selectable-multi-foreign-key") {
             } else if (el.type === "signable-multi-foreign-key") {
-              res[to_dataIndex] = item[from_dataIndex].map((el: any) => el.name); // this is for dtic pls delete it after we project end
+              res[to_dataIndex] = item[from_dataIndex].map((el: any) => el.name); // this is for MWan pls delete it after we project end
             } else if (el.type === "foreign-key") {
               res[to_dataIndex] = item[from_dataIndex];
             } else if (el.type === "multi-images") {
@@ -250,6 +250,9 @@ const CRUDBuilder: React.FC<CRADBuilderProps> = ({
         let item: any;
         if (Mapper) item = await Mapper(values);
         else item = values;
+
+        if (item.is_allowed_for_order !== null && item.is_allowed_for_order === false) item.is_allowed_for_order = 0;
+
         dispatch(UpdateAsync({ item, id: values.id }));
         setEditModalVisible(false);
       }
