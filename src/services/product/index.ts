@@ -5,10 +5,10 @@ import ApiResult from '../../utils/api/models/api-result';
 
 export class ProductService extends ApiService {
   constructor(config?: AxiosRequestConfig) {
-    super({ baseURL: `${process.env.API_URL}api`, ...config });
+    super({ baseURL: `${process.env.API_URL}api/`, ...config });
   }
 
-  public FetchSite = async (): Promise<ApiResult<Product[]>> => this.get<Product[]>(`/products/all`);
+  public FetchSite = async (): Promise<ApiResult<Product[]>> => this.get<Product[]>(`products/all`);
 
   public FetchDash = async (): Promise<ApiResult<Product[]>> => this.get<Product[]>(`/products/all?is_dashboard=1`);
 

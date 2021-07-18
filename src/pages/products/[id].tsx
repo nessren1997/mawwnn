@@ -79,8 +79,6 @@ export const getStaticProps: GetStaticProps<Props, { id: string }> = async ({ lo
 export const getStaticPaths: GetStaticPaths = async () => {
   const service = new ProductService();
   const result = await service.FetchSite();
-  console.log("skkkkkkkkkkkjsjnsjnxkskakmklsnknsalkksanksnaknkan");
-  console.log(result);
   if (isError(result)) {
     throw new Error();
   }
