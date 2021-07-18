@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Col, Row, Image, Form, Input, Button, notification } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import useTranslation from 'next-translate/useTranslation';
-import { Order_proccess_number_Req } from '../../models/order';
+// import { Order_proccess_number_Req } from '../../models/order';
 import { responsive_constant } from '../../constants/layout/responsive';
 import {
   ShowOrderStatusAsync,
@@ -15,7 +15,7 @@ import {selectUser} from "../../redux/app"
 
 const Index: React.FC = () => {
   const { t } = useTranslation('check-order');
-  const user=useSelector(selectUser);
+  // const user=useSelector(selectUser);
   const { query } = useRouter();
   const { order: orderNumber } = query;
   const dispatch = useDispatch();
@@ -37,10 +37,10 @@ const Index: React.FC = () => {
     orderNumber && dispatch(ShowOrderStatusAsync({ id: orderNumber.toString() }));
   }, [orderNumber])
 
-  useEffect(()=>{
-    if(user?.missing_params)
-    replace("/personal-collection");
-  },[user])
+  // useEffect(()=>{
+  //   if(user?.missing_params)
+  //   replace("/personal-collection");
+  // },[user])
   useEffect(() => {
     if (status === 'data') {
       replace('/order-collection');

@@ -24,6 +24,7 @@ const EventCard: FC<Props> = ({ data }) => {
           height={"280px"}
           preview={false}
           src={data.event_images[0]?.path}
+
           style={{ objectFit: "cover" }}
         />
         <Paragraph style={{ padding: "0 22px", margin: 6, fontWeight: 600 }} ellipsis={{ rows: 1, symbol: "..." }}>

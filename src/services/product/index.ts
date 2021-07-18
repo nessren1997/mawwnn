@@ -8,7 +8,7 @@ export class ProductService extends ApiService {
     super({ baseURL: `${process.env.API_URL}api/`, ...config });
   }
 
-  public FetchSite = async (): Promise<ApiResult<Product[]>> => this.get<Product[]>(`/products/all`);
+  public FetchSite = async (): Promise<ApiResult<Product[]>> => this.get<Product[]>(`products/all`);
 
   public FetchDash = async (): Promise<ApiResult<Product[]>> => this.get<Product[]>(`/products/all?is_dashboard=1`);
 

@@ -53,7 +53,7 @@ const NavBar: React.FC = () => {
   // set viewport logic
   const { outerWidth } = useWidth();
 
-  if (outerWidth <= 1000)
+  if (outerWidth <= 992)
     return (
       <SmallNav
         searchString={searchString}

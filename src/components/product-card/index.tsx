@@ -57,13 +57,14 @@ const ProductCard: FC<product_props> = ({ product }) => {
   };
 
   return (
-    <div className="card-container">
+
+    <div className='card-container'>
       <Link href={`/products/${product.id}`}>
-        <Image preview={false} className="card-image" src={product.product_images[0].image_path} />
+        <Image preview={false} className='card-image' src={product.product_images[0].thumbnail_250} />
       </Link>
-      {/* <Image preview={false} className="card-image" src={product.product_images[0].image_path} /> */}
-      <Row className="discreption-card">
-        <Paragraph style={{ margin: 0 }} ellipsis={{ rows: 2, symbol: "..." }}>
+      <Row className='discreption-card'>
+        <Paragraph style={{ margin: 0 }} ellipsis={{ rows: 2, symbol: '...' }}>
+
           {product.name}
         </Paragraph>
       </Row>

@@ -15,8 +15,9 @@ import { ClearProducts, selectRequestedProducts, selectRequestedProductsStatus }
 import ProductCard from "../components/product-card";
 import { CloseCircleOutlined, LoadingOutlined } from "@ant-design/icons";
 import Head from "next/head";
-import { selectUser } from "../redux/app";
-import { useRouter } from "next/router";
+// import {selectUser} from "../redux/app"
+// import {useRouter} from "next/router"
+
 import { Product } from "../models";
 
 const antIcon = <LoadingOutlined style={{ fontSize: 84 }} spin />;
@@ -24,14 +25,17 @@ const antIcon = <LoadingOutlined style={{ fontSize: 84 }} spin />;
 export default function index() {
   const { t } = useTranslation("home");
 
-  const { replace } = useRouter();
+
+  // const {replace}=useRouter();
+
 
   const results_section = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
   const requested_products = useSelector(selectRequestedProducts);
   const requested_products_status = useSelector(selectRequestedProductsStatus);
 
-  const user = useSelector(selectUser);
+  // const user=useSelector(selectUser);
+
   useEffect(() => {
     if (requested_products_status === "data") {
       if (window) {
@@ -44,9 +48,13 @@ export default function index() {
     dispatch(ClearProducts());
   }, []);
 
-  useEffect(() => {
-    if (user?.missing_params) replace("/personal-collection");
-  }, [user]);
+
+  // useEffect(()=>{
+  //   if(user?.missing_params===true)
+  //   replace("/personal-collection");
+
+  // },[user])
+
   return (
     <>
       <Head>

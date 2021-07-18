@@ -24,10 +24,6 @@ const id: FC<Props> = ({ product }) => {
   const status = useSelector(selectProductsStatus);
   const { id } = query;
 
-  useEffect(() => {
-    console.log("id", id);
-    console.log("pro", product.id);
-  }, []);
   return (
     <>
       <Head>
@@ -35,13 +31,11 @@ const id: FC<Props> = ({ product }) => {
 
         <meta name="title" content={`MAWN | ${product.name}`} />
         <meta name="description" content={product?.overview} />
-
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`http://mawn.co/products/${id}`} />
+        <meta property="og:url" content={`https://mawn.co/products/${id}`} />
         <meta property="og:title" content={`MAWN | ${product.name}`} />
         <meta property="og:description" content={product?.overview} />
         <meta property="og:image" content={product?.product_images[0].image_path} />
-
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`https://mawn.co/products/${id}`} />
         <meta property="twitter:title" content={`MAWN | ${product.name}`} />
@@ -63,11 +57,9 @@ export default id;
 export const getStaticProps: GetStaticProps<Props, { id: string }> = async ({ locale, params }) => {
   const id = params?.id;
   const _id = Number(id);
-
   const service = new ProductService({
     headers: { [KEY_LANG_HEADER]: locale },
   });
-
   const result = await service.Show({ id: _id });
 
   console.log("res", result);
