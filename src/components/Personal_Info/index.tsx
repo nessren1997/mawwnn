@@ -151,12 +151,12 @@ const PersonalInfo: React.FC = () => {
                   rules={[
                     { message: t("phoneN") },
                     {
-                      pattern: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/,
+                      pattern: /^((?:[+?0?0?966]+)(?:\s?\d{2})(?:\s?\d{7}))$/,
                       message: t`form-validation.invalid-phone-number`,
-                    },
+                    },    
                     () => ({
                       validator(_, value) {
-                        if (!value || isValidPhoneNumber(`+963${(value as string).replace(/\s/g, "")}`, "SY"))
+                        if (!value || isValidPhoneNumber(`+96${(value as string).replace(/\s/g, "")}`, "SY"))
                           return Promise.resolve();
                         return Promise.reject(new Error(t`form-validation.invalid-uae-number`));
                       },

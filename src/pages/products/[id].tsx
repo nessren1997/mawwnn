@@ -43,9 +43,9 @@ const id: FC<Props> = ({ product }) => {
         <meta property='twitter:description' content={product?.overview} />
         <meta property='twitter:image' content={product?.product_images[0].image_path} />
       </Head>
-      <Row justify='center' gutter={[0, 64]}>
+      <Row justify="center" gutter={[0, 64]}>
         <Col {...responsive_constant}>
-          <LoadingData dataValid={() => (product ? true : false)} loading={status === 'loading'}>
+          <LoadingData dataValid={() => (product ? true : false)} loading={status === "loading"}>
             <SingleProduct product={product!} />
           </LoadingData>
         </Col>
@@ -58,12 +58,12 @@ export default id;
 export const getStaticProps: GetStaticProps<Props, { id: string }> = async ({ locale, params }) => {
   const id = params?.id;
   const _id = Number(id);
-
   const service = new ProductService({
     headers: { [KEY_LANG_HEADER]: locale },
   });
-
   const result = await service.Show({ id: _id });
+
+  console.log("res", result);
 
   if (isError(result)) {
     console.error(result);
@@ -79,21 +79,18 @@ export const getStaticProps: GetStaticProps<Props, { id: string }> = async ({ lo
 export const getStaticPaths: GetStaticPaths = async () => {
   const service = new ProductService();
   const result = await service.FetchSite();
-  console.log("skkkkkkkkkkkjsjnsjnxkskakmklsnknsalkksanksnaknkan");
-  console.log(result);
   if (isError(result)) {
-    console.log(result, 'getStaticPaths');
     throw new Error();
   }
 
   const pathsAr = result.data.map((el) => ({
     params: { id: el.id.toString() },
-    locale: 'ar',
-    
+    locale: "ar",
+
   }));
   const pathsEn = result.data.map((el) => ({
     params: { id: el.id.toString() },
-    locale: 'en',
+    locale: "en",
   }));
 
   const paths = [...pathsAr, ...pathsEn];

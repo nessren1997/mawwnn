@@ -3,10 +3,10 @@
   "homepage": ".",
   "version": "2.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "type-check": "tsc"
+    "start": "next start -p 3000"
+  
   },
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
